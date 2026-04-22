@@ -486,14 +486,15 @@
    --------------------------------------------------------------- */
 .aliados-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: var(--sp-4);
-  max-width: 960px;
+  max-width: 1040px;
   margin: var(--sp-8) auto 0;
 }
 
 @media (min-width: 640px)  { .aliados-grid { grid-template-columns: repeat(3, 1fr); } }
-@media (min-width: 1024px) { .aliados-grid { grid-template-columns: repeat(6, 1fr); } }
+@media (min-width: 900px)  { .aliados-grid { grid-template-columns: repeat(5, 1fr); } }
+@media (min-width: 1100px) { .aliados-grid { grid-template-columns: repeat(9, 1fr); } }
 
 .aliado-card {
   display: flex;
@@ -517,23 +518,44 @@
 }
 
 .aliado-card__logo {
-  width: auto; height: 28px;
-  max-width: 100%; object-fit: contain;
-  margin-bottom: 0.5rem;
+  width: 36px;
+  height: 36px;
+  max-width: 100%;
+  object-fit: contain;
+  margin-bottom: 0.6rem;
+  transition: opacity 0.2s ease;
+}
+
+.aliado-card:hover .aliado-card__logo {
+  opacity: 0.8;
 }
 
 .aliado-card__name {
   font-family: var(--font-display);
-  font-size: 0.95rem; font-weight: 700;
-  color: var(--color-cafe); line-height: 1.2;
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: var(--color-cafe);
+  line-height: 1.2;
 }
 
 .aliado-card__program {
-  font-size: 0.72rem;
+  font-size: 0.66rem;
   color: var(--color-cafe-claro);
   text-transform: uppercase;
-  letter-spacing: 0.08em;
+  letter-spacing: 0.06em;
   font-weight: 600;
+}
+
+/* Texto de agradecimiento bajo la grilla de aliados */
+.aliados-agradecimiento {
+  max-width: 680px;
+  margin: var(--sp-8) auto 0;
+  text-align: center;
+  font-family: var(--font-cuerpo);
+  font-size: 0.95rem;
+  line-height: 1.7;
+  color: var(--color-cafe-claro);
+  font-style: italic;
 }
 
 
