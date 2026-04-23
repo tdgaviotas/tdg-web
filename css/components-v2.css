@@ -1,0 +1,1577 @@
+/* ================================================================
+   TIERRA DE GAVIOTAS — components-v2.css
+   Estilos adicionales — iteración v2
+   ================================================================ */
+
+
+/* ---------------------------------------------------------------
+   CAMBIO 2 — HERO: imagen de fondo real + mobile
+   --------------------------------------------------------------- */
+@media (max-width: 768px) {
+  .hero__bg {
+    background:
+      linear-gradient(
+        180deg,
+        rgba(53, 33, 18, 0.55) 0%,
+        rgba(53, 33, 18, 0.75) 100%
+      ),
+      url('../images/hero/hero-chiloe-mobile.jpg') center / cover no-repeat;
+    background-color: var(--color-cafe-oscuro);
+  }
+}
+
+
+/* ---------------------------------------------------------------
+   CAMBIO 3 — PAGE HERO CON FOTO DE FONDO (páginas internas)
+   --------------------------------------------------------------- */
+.page-hero {
+  background-color: var(--color-cafe);
+  padding-top: calc(var(--navbar-h) + var(--sp-12));
+  padding-bottom: var(--sp-12);
+  position: relative;
+  overflow: hidden;
+  min-height: 360px;
+  display: flex;
+  align-items: center;
+  background-size: cover;
+  background-position: center;
+}
+
+.page-hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(53, 33, 18, 0.60),
+    rgba(53, 33, 18, 0.80)
+  );
+  z-index: 1;
+}
+
+.page-hero__content,
+.page-hero .container.page-hero__content {
+  position: relative;
+  z-index: 2;
+}
+
+.page-hero .page-hero__sub {
+  color: rgba(255, 255, 255, 0.85);
+  font-size: clamp(1rem, 2.2vw, 1.15rem);
+  max-width: 600px;
+  margin-top: var(--sp-3);
+  line-height: 1.65;
+}
+
+/* Sección con foto de fondo (home) */
+.section--with-bg {
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  color: var(--color-blanco);
+}
+
+.section--with-bg::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(53, 33, 18, 0.70),
+    rgba(53, 33, 18, 0.88)
+  );
+  z-index: 1;
+}
+
+.section--with-bg > .container {
+  position: relative;
+  z-index: 2;
+}
+
+.section--with-bg h2,
+.section--with-bg h3 { color: var(--color-blanco); }
+.section--with-bg p   { color: rgba(255, 255, 255, 0.88); }
+
+
+/* ---------------------------------------------------------------
+   CAMBIO 4 — CTA banner: isotipo TDG como decoración
+   --------------------------------------------------------------- */
+.cta-banner::before {
+  content: '';
+  position: absolute;
+  top: -20%;
+  right: -10%;
+  width: 480px;
+  height: 480px;
+  background-image: url('../images/logo/TDG_1_Vertical_-_Para_fondo_oscuro.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  opacity: 0.06;
+  pointer-events: none;
+  z-index: 1;
+  border-radius: 0;  /* sobrescribe el 50% anterior */
+  background-color: transparent;
+}
+
+.cta-banner > .container {
+  position: relative;
+  z-index: 2;
+}
+
+@media (max-width: 768px) {
+  .cta-banner::before {
+    width: 280px;
+    height: 280px;
+    top: -10%;
+    right: -30%;
+  }
+}
+
+
+/* ---------------------------------------------------------------
+   CAMBIO 5 — BORDERLINE_CL — identidad galáctica atmosférica
+   --------------------------------------------------------------- */
+:root {
+  --bdln-space-deep: #0A1028;
+  --bdln-space-mid:  #1A2550;
+  --bdln-nebula:     #2E1A47;
+  --bdln-silver:     #C8CDD4;
+  --bdln-silver-hi:  #E8EAEE;
+  --bdln-saturn:     #D4A574;
+}
+
+.programa-borderline {
+  position: relative;
+  padding-block: var(--sp-16);
+  background:
+    radial-gradient(ellipse at 20% 20%, rgba(46,26,71,0.5) 0%, transparent 50%),
+    radial-gradient(ellipse at 80% 60%, rgba(26,37,80,0.6) 0%, transparent 55%),
+    linear-gradient(180deg, var(--bdln-space-deep) 0%, #050818 100%);
+  color: var(--bdln-silver);
+  overflow: hidden;
+}
+
+.programa-borderline::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image:
+    radial-gradient(0.5px 0.5px at 10% 15%, #fff, transparent),
+    radial-gradient(1px   1px   at 25% 35%, #fff, transparent),
+    radial-gradient(0.5px 0.5px at 45% 10%, rgba(255,255,255,0.7), transparent),
+    radial-gradient(1.5px 1.5px at 55% 50%, #fff, transparent),
+    radial-gradient(0.5px 0.5px at 65% 70%, rgba(255,255,255,0.8), transparent),
+    radial-gradient(1px   1px   at 75% 20%, #fff, transparent),
+    radial-gradient(2px   2px   at 85% 40%, #fff, transparent),
+    radial-gradient(0.5px 0.5px at 95% 85%, rgba(255,255,255,0.6), transparent),
+    radial-gradient(1px   1px   at 15% 75%, #fff, transparent),
+    radial-gradient(0.5px 0.5px at 35% 90%, rgba(255,255,255,0.7), transparent);
+  opacity: 0.85;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.programa-borderline::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image:
+    radial-gradient(1px   1px   at  5%  5%, rgba(255,255,255,0.5), transparent),
+    radial-gradient(0.5px 0.5px at 92%  8%, rgba(255,255,255,0.8), transparent),
+    radial-gradient(1.5px 1.5px at 40% 80%, rgba(255,255,255,0.6), transparent),
+    radial-gradient(0.5px 0.5px at 70% 95%, rgba(255,255,255,0.7), transparent);
+  opacity: 0.8;
+  pointer-events: none;
+  animation: bdln-twinkle 4s ease-in-out infinite;
+  z-index: 0;
+}
+
+@keyframes bdln-twinkle {
+  0%, 100% { opacity: 0.6; }
+  50%       { opacity: 1;   }
+}
+
+.bdln-container { position: relative; z-index: 3; }
+
+/* Luna */
+.bdln-moon {
+  position: absolute;
+  top: 40px; left: -80px;
+  width: 220px; height: 220px;
+  border-radius: 50%;
+  background: radial-gradient(circle at 35% 30%,
+    #F0EEE6 0%, #D0CBC0 40%, #8E8678 75%, #5A5145 100%);
+  box-shadow: inset -20px -20px 50px rgba(0,0,0,0.5),
+              0 0 60px rgba(240,238,230,0.2);
+  opacity: 0.75; z-index: 2;
+}
+
+@media (max-width: 768px) {
+  .bdln-moon { width: 120px; height: 120px; top: 20px; left: -40px; }
+}
+
+/* Saturno */
+.bdln-saturn {
+  position: absolute;
+  bottom: 120px; right: 40px;
+  width: 60px; height: 60px;
+  border-radius: 50%;
+  background: radial-gradient(circle at 30% 30%,
+    #E8C89A 0%, #D4A574 50%, #9A7446 100%);
+  z-index: 2;
+}
+
+.bdln-saturn::before {
+  content: '';
+  position: absolute;
+  top: 50%; left: 50%;
+  width: 110px; height: 18px;
+  transform: translate(-50%,-50%) rotate(-20deg);
+  border-radius: 50%;
+  border: 2px solid rgba(212,165,116,0.6);
+}
+
+@media (max-width: 768px) { .bdln-saturn { display: none; } }
+
+/* Header BDLN */
+.bdln-header { text-align: center; margin-bottom: var(--sp-10); }
+
+.bdln-tag {
+  display: block;
+  font-family: 'Courier New', monospace;
+  font-size: 0.8rem;
+  color: var(--bdln-silver);
+  letter-spacing: 0.4em;
+  text-transform: uppercase;
+  margin: 0 0 var(--sp-5);
+  opacity: 0.7;
+}
+
+.bdln-logo-text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.4rem;
+  margin: 0; line-height: 1;
+}
+
+.bdln-logo-main {
+  font-family: 'Orbitron', 'Space Grotesk', sans-serif;
+  font-size: clamp(3.5rem, 10vw, 6.5rem);
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  background: linear-gradient(
+    180deg, #F5F7FA 0%, #C8CDD4 40%, #8A8E96 70%, #B8BCC4 100%
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.bdln-logo-sub {
+  font-family: 'Courier New', monospace;
+  font-size: clamp(0.85rem, 2vw, 1.1rem);
+  letter-spacing: 0.6em;
+  color: var(--bdln-silver);
+  text-transform: uppercase;
+  opacity: 0.8;
+  text-indent: 0.6em;
+}
+
+/* Body BDLN */
+.bdln-body {
+  max-width: 720px;
+  margin: 0 auto var(--sp-10);
+  text-align: center;
+}
+
+.bdln-lead {
+  font-family: var(--font-titulo);
+  font-size: clamp(1.2rem, 2.5vw, 1.5rem);
+  font-style: italic;
+  color: var(--bdln-silver-hi);
+  line-height: 1.5;
+  margin-bottom: var(--sp-6);
+}
+
+.bdln-paragraph {
+  font-family: var(--font-cuerpo);
+  color: var(--bdln-silver);
+  opacity: 0.85;
+  line-height: 1.7;
+  font-size: 1rem;
+  margin-bottom: var(--sp-5);
+}
+
+.bdln-quote {
+  border: none;
+  font-family: var(--font-titulo);
+  font-size: clamp(1.3rem, 3vw, 1.8rem);
+  font-style: italic;
+  color: var(--bdln-saturn);
+  margin: var(--sp-8) auto;
+  padding: var(--sp-5) var(--sp-6);
+  max-width: 560px;
+  position: relative;
+}
+
+.bdln-quote::before,
+.bdln-quote::after {
+  font-family: Georgia, serif;
+  font-size: 3rem;
+  color: var(--bdln-saturn);
+  opacity: 0.4;
+  position: absolute;
+  font-style: normal;
+  line-height: 1;
+}
+
+.bdln-quote::before { content: '\201C'; top: -10px; left: 0; }
+.bdln-quote::after  { content: '\201D'; bottom: -40px; right: 10px; }
+
+/* Galería BDLN */
+.bdln-gallery { margin-top: var(--sp-12); }
+
+.bdln-gallery-title {
+  text-align: center;
+  font-family: 'Courier New', monospace;
+  color: var(--bdln-silver);
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  margin-bottom: var(--sp-6);
+  opacity: 0.7;
+}
+
+.bdln-gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: var(--sp-4);
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.bdln-cap {
+  position: relative;
+  margin: 0;
+  border-radius: 8px;
+  overflow: hidden;
+  border: 1px solid rgba(200,205,212,0.15);
+  aspect-ratio: 4/3;
+  background: var(--bdln-space-mid);
+}
+
+.bdln-cap img {
+  width: 100%; height: 100%;
+  object-fit: cover; display: block;
+  transition: transform 0.4s ease, filter 0.4s ease;
+  filter: saturate(0.9) brightness(0.95);
+}
+
+.bdln-cap:hover img {
+  transform: scale(1.05);
+  filter: saturate(1.1) brightness(1.05);
+}
+
+.bdln-cap figcaption {
+  position: absolute;
+  bottom: 0; left: 0; right: 0;
+  padding: var(--sp-3);
+  background: linear-gradient(to top, rgba(10,16,40,0.95) 0%, transparent 100%);
+  color: var(--bdln-silver-hi);
+  font-family: 'Courier New', monospace;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  font-size: 0.75rem;
+}
+
+/* CTAs BDLN */
+.bdln-ctas {
+  text-align: center;
+  margin-top: var(--sp-10);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--sp-5);
+  flex-wrap: wrap;
+}
+
+.bdln-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 1rem 2rem;
+  border-radius: 2px;
+  font-family: 'Courier New', monospace;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  font-weight: 600;
+  text-decoration: none;
+  font-size: 0.85rem;
+  transition: all 0.3s ease;
+}
+
+.bdln-btn--primary {
+  background: transparent;
+  border: 1px solid var(--bdln-silver);
+  color: var(--bdln-silver-hi);
+}
+
+.bdln-btn--primary:hover {
+  background: var(--bdln-silver);
+  color: var(--bdln-space-deep);
+  letter-spacing: 0.3em;
+  box-shadow: 0 0 30px rgba(200,205,212,0.3);
+}
+
+.bdln-futuro {
+  font-family: 'Courier New', monospace;
+  color: var(--bdln-saturn);
+  font-size: 0.8rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  opacity: 0.8;
+}
+
+/* Card BDLN en home */
+.card-programa--borderline {
+  background:
+    radial-gradient(ellipse at 70% 30%, rgba(46,26,71,0.4) 0%, transparent 60%),
+    linear-gradient(135deg, #0A1028 0%, #1A2550 100%);
+  color: var(--bdln-silver-hi);
+  border: 1px solid rgba(200,205,212,0.20);
+  position: relative;
+  overflow: hidden;
+}
+
+.card-programa--borderline::before {
+  content: '';
+  position: absolute; inset: 0;
+  background-image:
+    radial-gradient(1px 1px at 20% 30%, #fff, transparent),
+    radial-gradient(0.5px 0.5px at 60% 70%, rgba(255,255,255,0.7), transparent),
+    radial-gradient(1.5px 1.5px at 85% 20%, #fff, transparent);
+  opacity: 0.7;
+  pointer-events: none;
+}
+
+.card-programa--borderline * { position: relative; z-index: 2; }
+
+.card-programa--borderline .card-programa__title {
+  font-family: 'Orbitron', sans-serif;
+  color: var(--bdln-silver-hi);
+  letter-spacing: 0.05em;
+  font-size: 1.1rem;
+}
+
+.card-programa--borderline .card-programa__desc  { color: rgba(200,205,212,0.85); }
+.card-programa--borderline .card-programa__editions { color: var(--bdln-silver); opacity: 0.7; }
+
+.card-programa--borderline .card-programa__tag {
+  background: rgba(212,165,116,0.25);
+  color: var(--bdln-saturn);
+  font-family: 'Courier New', monospace;
+  letter-spacing: 0.2em;
+  border: 1px solid rgba(212,165,116,0.3);
+}
+
+.card-programa--borderline .card-programa__footer {
+  border-top: 1px solid rgba(200,205,212,0.1);
+}
+
+
+/* ---------------------------------------------------------------
+   CAMBIO 6 — ALIADOS TECNOLÓGICOS (sección única)
+   --------------------------------------------------------------- */
+.aliados-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--sp-4);
+  max-width: 1040px;
+  margin: var(--sp-8) auto 0;
+}
+
+@media (min-width: 640px)  { .aliados-grid { grid-template-columns: repeat(3, 1fr); } }
+@media (min-width: 900px)  { .aliados-grid { grid-template-columns: repeat(5, 1fr); } }
+@media (min-width: 1100px) { .aliados-grid { grid-template-columns: repeat(9, 1fr); } }
+
+.aliado-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
+  padding: var(--sp-5) var(--sp-3);
+  background: var(--color-blanco);
+  border: 1px solid rgba(53,33,18,0.08);
+  border-radius: 12px;
+  text-decoration: none;
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+  text-align: center;
+}
+
+.aliado-card:hover {
+  transform: translateY(-3px);
+  border-color: var(--color-ambar);
+  box-shadow: 0 8px 20px rgba(53,33,18,0.08);
+}
+
+.aliado-card__logo {
+  width: 36px;
+  height: 36px;
+  max-width: 100%;
+  object-fit: contain;
+  margin-bottom: 0.6rem;
+  transition: opacity 0.2s ease;
+}
+
+.aliado-card:hover .aliado-card__logo {
+  opacity: 0.8;
+}
+
+.aliado-card__name {
+  font-family: var(--font-display);
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: var(--color-cafe);
+  line-height: 1.2;
+}
+
+.aliado-card__program {
+  font-size: 0.66rem;
+  color: var(--color-cafe-claro);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  font-weight: 600;
+}
+
+/* Texto de agradecimiento bajo la grilla de aliados */
+.aliados-agradecimiento {
+  max-width: 680px;
+  margin: var(--sp-8) auto 0;
+  text-align: center;
+  font-family: var(--font-cuerpo);
+  font-size: 0.95rem;
+  line-height: 1.7;
+  color: var(--color-cafe-claro);
+  font-style: italic;
+}
+
+
+/* ---------------------------------------------------------------
+   CAMBIO 7 — FOOTER compactado (mobile-first ya tiene 1fr)
+   --------------------------------------------------------------- */
+@media (min-width: 640px) {
+  .footer__grid { grid-template-columns: 1fr 1fr; }
+}
+
+@media (min-width: 1024px) {
+  .footer__grid {
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+    gap: var(--sp-8);
+  }
+}
+
+
+/* ---------------------------------------------------------------
+   CAMBIO 8 — ETIMOLOGÍA INFOGRAFÍA EDITORIAL
+   --------------------------------------------------------------- */
+.etimologia-infografia {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--sp-4);
+  margin-top: var(--sp-6);
+  padding: var(--sp-8) var(--sp-6);
+  background: linear-gradient(180deg, #FFFBF2 0%, var(--color-crema) 100%);
+  border: 1px solid rgba(255,182,0,0.20);
+  border-radius: 20px;
+  position: relative;
+  overflow: hidden;
+}
+
+.etimologia-infografia::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0;
+  width: 60px; height: 3px;
+  background: var(--color-ambar);
+}
+
+@media (min-width: 768px) {
+  .etimologia-infografia {
+    grid-template-columns: 1fr auto 1fr auto 1.2fr;
+    align-items: center;
+    gap: var(--sp-5);
+    padding: var(--sp-10);
+  }
+}
+
+.etim-palabra {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  text-align: center;
+  padding: var(--sp-4) var(--sp-3);
+}
+
+.etim-num {
+  font-family: var(--font-display);
+  font-size: 0.75rem;
+  color: var(--color-ambar);
+  font-weight: 700;
+  letter-spacing: 0.3em;
+}
+
+.etim-mapudungun {
+  font-family: var(--font-titulo);
+  font-style: italic;
+  font-size: clamp(2rem, 5vw, 3rem);
+  color: var(--color-cafe);
+  font-weight: 700;
+  line-height: 1;
+  margin-block: 0.2rem;
+}
+
+.etim-trad {
+  font-family: var(--font-display);
+  font-size: 0.95rem;
+  color: var(--color-cafe-claro);
+  font-weight: 600;
+}
+
+.etim-contexto {
+  font-size: 0.82rem;
+  color: var(--color-cafe-claro);
+  opacity: 0.8;
+  font-style: italic;
+}
+
+.etim-mas {
+  font-family: var(--font-titulo);
+  font-size: 2rem;
+  color: var(--color-ambar);
+  text-align: center;
+  font-weight: 300;
+  line-height: 1;
+}
+
+.etim-flecha {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: var(--sp-2) 0;
+}
+
+.etim-flecha svg { width: 100%; max-width: 120px; height: auto; }
+
+@media (max-width: 767px) {
+  .etim-flecha svg { transform: rotate(90deg); max-width: 60px; }
+}
+
+.etim-resultado {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  text-align: center;
+  padding: var(--sp-5) var(--sp-4);
+  background: var(--color-cafe);
+  color: var(--color-crema);
+  border-radius: 14px;
+}
+
+.etim-resultado-lbl {
+  font-family: var(--font-display);
+  font-size: 0.72rem;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: var(--color-ambar);
+  margin: 0;
+}
+
+.etim-resultado-palabra {
+  font-family: var(--font-titulo);
+  font-size: clamp(2.4rem, 5.5vw, 3.6rem);
+  font-weight: 700;
+  line-height: 1;
+  color: var(--color-ambar);
+  margin: 0;
+}
+
+.etim-resultado-trad {
+  font-family: var(--font-display);
+  font-size: 1rem;
+  font-style: italic;
+  color: var(--color-crema);
+  font-weight: 400;
+  margin: 0;
+}
+
+.etim-resultado-nota {
+  font-size: 0.8rem;
+  color: rgba(244,239,233,0.7);
+  margin: 0;
+}
+
+
+/* ---------------------------------------------------------------
+   CAMBIO 9 — TIMELINE: marca de identidad por hito
+   --------------------------------------------------------------- */
+.timeline-item__marca {
+  position: absolute;
+  left: -11px;
+  top: var(--sp-5);
+  width: 19px; height: 19px;
+  border-radius: 50%;
+  border: 3px solid var(--color-crema);
+  box-shadow: 0 0 0 2px rgba(53,33,18,0.1);
+}
+
+.timeline-item--tdg .timeline-item__marca {
+  background: linear-gradient(135deg, var(--color-cafe) 50%, var(--color-ambar) 50%);
+}
+.timeline-item--tdg .timeline-year { color: var(--color-cafe); }
+
+.timeline-item--trova { border-left-color: #E85D24; }
+.timeline-item--trova .timeline-item__marca {
+  background: conic-gradient(#F4EFE9 0deg 120deg, #E85D24 120deg 240deg, #FFB600 240deg 360deg);
+}
+.timeline-item--trova .timeline-year { color: #E85D24; }
+
+.timeline-item--festival { border-left-color: #6B2A8E; }
+.timeline-item--festival .timeline-item__marca {
+  background: conic-gradient(#6B2A8E 0deg 120deg, #FFFFFF 120deg 240deg, #FFB600 240deg 360deg);
+}
+.timeline-item--festival .timeline-year { color: #6B2A8E; }
+
+
+/* ---------------------------------------------------------------
+   CAMBIO 10 — COLABORACIONES CON FOTO
+   --------------------------------------------------------------- */
+.colaboraciones-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--sp-6);
+  margin-top: var(--sp-8);
+}
+
+@media (min-width: 768px) {
+  .colaboraciones-grid { grid-template-columns: repeat(3, 1fr); }
+}
+
+.colab-card {
+  background: var(--color-blanco);
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 3px 14px rgba(53,33,18,0.07);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.colab-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 28px rgba(53,33,18,0.12);
+}
+
+.colab-card__img {
+  aspect-ratio: 16/10;
+  overflow: hidden;
+  background: var(--color-crema);
+}
+
+.colab-card__img img {
+  width: 100%; height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.colab-card:hover .colab-card__img img { transform: scale(1.04); }
+
+.colab-card__body { padding: var(--sp-5); }
+
+.colab-card__tag {
+  font-family: var(--font-display);
+  color: var(--color-ambar);
+  font-size: 0.75rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  font-weight: 700;
+  margin: 0 0 0.3rem;
+  display: block;
+}
+
+.colab-card__title {
+  font-family: var(--font-titulo);
+  color: var(--color-cafe);
+  font-size: 1.4rem;
+  margin: 0 0 0.6rem;
+}
+
+.colab-card__desc {
+  color: var(--color-cafe-claro);
+  font-size: 0.95rem;
+  line-height: 1.55;
+  margin: 0;
+}
+
+
+/* ---------------------------------------------------------------
+   CAMBIO 11 — MANUAL GRÁFICO
+   --------------------------------------------------------------- */
+.manual-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--sp-8);
+  margin-top: var(--sp-8);
+}
+
+@media (min-width: 768px) {
+  .manual-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+.manual-identidad {
+  background: var(--color-blanco);
+  border: 1px solid rgba(53,33,18,0.08);
+  border-radius: 18px;
+  padding: var(--sp-8);
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-4);
+  transition: box-shadow 0.25s ease;
+}
+
+.manual-identidad:hover {
+  box-shadow: 0 8px 28px rgba(53,33,18,0.10);
+}
+
+.manual-identidad__tag {
+  font-family: var(--font-display);
+  font-size: 0.75rem;
+  color: var(--color-ambar);
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  font-weight: 700;
+  margin: 0;
+}
+
+.manual-identidad__name {
+  font-family: var(--font-titulo);
+  font-size: clamp(1.8rem, 4vw, 2.4rem);
+  color: var(--color-cafe);
+  margin: 0.3rem 0 0.6rem;
+  line-height: 1.15;
+}
+
+.manual-identidad__desc {
+  color: var(--color-cafe-claro);
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.manual-identidad__preview {
+  background: var(--color-crema);
+  border-radius: 12px;
+  padding: var(--sp-5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 180px;
+}
+
+.manual-identidad__preview img {
+  max-width: 70%;
+  max-height: 140px;
+  object-fit: contain;
+}
+
+.manual-identidad__paleta {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.paleta-chip {
+  flex: 1;
+  min-width: 80px;
+  aspect-ratio: 3/2;
+  border-radius: 8px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  padding: 0.5rem;
+  font-family: 'Courier New', monospace;
+  font-size: 0.65rem;
+  letter-spacing: 0.05em;
+  font-weight: 700;
+  color: rgba(255,255,255,0.9);
+  text-shadow: 0 1px 3px rgba(0,0,0,0.5);
+}
+
+.manual-identidad__tipo {
+  padding: var(--sp-3) 0;
+  border-top: 1px solid rgba(53,33,18,0.08);
+}
+
+.manual-identidad__tipo-title {
+  font-size: 0.78rem;
+  color: var(--color-cafe-claro);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  margin: 0 0 0.3rem;
+}
+
+.manual-identidad__tipo-fuente {
+  font-family: var(--font-titulo);
+  font-size: 1.1rem;
+  color: var(--color-cafe);
+  margin: 0;
+}
+
+.manual-identidad__download {
+  margin-top: auto;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.9rem 1.4rem;
+  background: var(--color-cafe);
+  color: var(--color-ambar);
+  border-radius: 999px;
+  text-decoration: none;
+  font-family: var(--font-display);
+  letter-spacing: 0.05em;
+  font-weight: 600;
+  transition: background 0.25s ease, transform 0.25s ease, color 0.25s ease;
+}
+
+.manual-identidad__download:hover {
+  background: var(--color-ambar);
+  color: var(--color-cafe);
+  transform: translateY(-2px);
+}
+
+/* Variante BDLN del manual */
+.manual-identidad--bdln {
+  background:
+    radial-gradient(ellipse at 80% 20%, rgba(46,26,71,0.3) 0%, transparent 60%),
+    var(--bdln-space-deep);
+  border-color: rgba(200,205,212,0.15);
+  color: var(--bdln-silver);
+}
+
+.manual-identidad--bdln .manual-identidad__name {
+  color: var(--bdln-silver-hi);
+  font-family: 'Orbitron', sans-serif;
+  font-size: clamp(1.5rem, 3vw, 2rem);
+  letter-spacing: 0.05em;
+}
+
+.manual-identidad--bdln .manual-identidad__desc  { color: var(--bdln-silver); opacity: 0.85; }
+.manual-identidad--bdln .manual-identidad__tipo-title  { color: var(--bdln-silver); }
+.manual-identidad--bdln .manual-identidad__tipo-fuente { color: var(--bdln-silver-hi); }
+.manual-identidad--bdln .manual-identidad__preview     { background: var(--bdln-space-mid); }
+.manual-identidad--bdln .manual-identidad__tipo        { border-top-color: rgba(200,205,212,0.1); }
+
+.manual-identidad--bdln .manual-identidad__download {
+  background: transparent;
+  border: 1px solid var(--bdln-silver);
+  color: var(--bdln-silver-hi);
+  font-family: 'Courier New', monospace;
+  letter-spacing: 0.2em;
+}
+
+.manual-identidad--bdln .manual-identidad__download:hover {
+  background: var(--bdln-silver);
+  color: var(--bdln-space-deep);
+}
+
+
+/* ---------------------------------------------------------------
+   CAMBIO 12 — VOLUNTARIADO CON FOTO DE FONDO
+   --------------------------------------------------------------- */
+.voluntariado-item--con-foto {
+  position: relative;
+  min-height: 180px;
+  background-size: cover;
+  background-position: center;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  padding: 0;
+  border: none;
+  box-shadow: var(--shadow-sm);
+}
+
+.voluntariado-item__overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(53,33,18,0.30) 0%,
+    rgba(53,33,18,0.85) 100%
+  );
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: var(--sp-4);
+  transition: background 0.25s ease;
+}
+
+.voluntariado-item--con-foto:hover .voluntariado-item__overlay {
+  background: linear-gradient(
+    to bottom,
+    rgba(53,33,18,0.20) 0%,
+    rgba(255,182,0,0.90) 100%
+  );
+}
+
+.voluntariado-item--con-foto .voluntariado-item__icon {
+  font-size: 1.8rem;
+  margin-bottom: 0.4rem;
+  line-height: 1;
+}
+
+.voluntariado-item--con-foto .voluntariado-item__text {
+  color: var(--color-crema);
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 1rem;
+  margin: 0;
+  line-height: 1.3;
+}
+
+.voluntariado-item--con-foto:hover .voluntariado-item__text {
+  color: var(--color-cafe);
+}
+
+
+/* ---------------------------------------------------------------
+   CAMBIO 13 — CONTACTO COMPACTO
+   --------------------------------------------------------------- */
+.contact-list-compact {
+  list-style: none;
+  padding: 0; margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-3);
+}
+
+.contact-row {
+  display: flex;
+  align-items: center;
+  gap: var(--sp-3);
+  padding: var(--sp-3) var(--sp-4);
+  background: var(--color-blanco);
+  border-radius: 12px;
+  border: 1px solid rgba(53,33,18,0.08);
+  transition: border-color 0.2s ease, transform 0.2s ease;
+}
+
+.contact-row:hover {
+  border-color: var(--color-ambar);
+  transform: translateX(3px);
+}
+
+.contact-row__icon {
+  width: 42px; height: 42px;
+  border-radius: 50%;
+  background: var(--color-crema);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  color: var(--color-cafe);
+}
+
+.contact-row__icon svg { width: 20px; height: 20px; }
+
+.contact-row__body {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.1rem;
+}
+
+.contact-row__label {
+  font-family: var(--font-display);
+  font-size: 0.72rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--color-cafe-claro);
+  font-weight: 600;
+  margin: 0;
+}
+
+.contact-row__value {
+  font-family: var(--font-cuerpo);
+  font-size: 1rem;
+  color: var(--color-cafe);
+  text-decoration: none;
+  font-weight: 600;
+  margin: 0;
+}
+
+.contact-row__value:hover { color: var(--color-ambar); }
+
+
+/* ---------------------------------------------------------------
+   CAMBIO 14 — LINK VIDEO (clínica streaming)
+   --------------------------------------------------------------- */
+.link-video {
+  color: var(--color-cafe);
+  text-decoration: none;
+  font-weight: 700;
+  border-bottom: 2px solid var(--color-ambar);
+  padding-bottom: 1px;
+  transition: color 0.2s ease;
+}
+
+.link-video::after {
+  content: ' \25B6';
+  font-size: 0.75em;
+  color: var(--color-ambar);
+}
+
+.link-video:hover { color: var(--color-ambar); }
+
+
+/* ---------------------------------------------------------------
+   EMBLEMA del embajador cultural
+   --------------------------------------------------------------- */
+.embajador-foto {
+  margin-top: var(--sp-6);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  max-width: 320px;
+}
+
+.embajador-foto img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  display: block;
+}
+
+.embajador-foto figcaption {
+  padding: var(--sp-3);
+  background: var(--color-cafe);
+  color: rgba(244,239,233,0.8);
+  font-family: var(--font-display);
+  font-size: 0.82rem;
+  text-align: center;
+  letter-spacing: 0.05em;
+}
+
+
+/* ===============================================================
+   V3 — CAMBIO 1: CLASES EXTRAÍDAS DE OVERRIDES INLINE
+   =============================================================== */
+
+/* ---------------------------------------------------------------
+   BDLN logo tipografía — Orbitron como fallback de "Dune"
+
+   TIPOGRAFÍA OFICIAL BDLN: "Dune" (no disponible en Google Fonts).
+   El logo oficial es el texto "BDLN" en Dune con el ancho de las
+   letras aumentado (tracking). Orbitron se usa como fallback web
+   libre hasta que se implemente la versión @font-face con el
+   archivo propietario.
+   Cuando el equipo entregue el .woff2 de Dune, reemplazar
+   'Orbitron' por 'Dune' en esta regla y agregar @font-face.
+   --------------------------------------------------------------- */
+.bdln-logo-text {
+  font-family: 'Orbitron', 'Space Grotesk', sans-serif;
+  font-size: 2.2rem;
+  font-weight: 800;
+  letter-spacing: 0.05em;
+  background: linear-gradient(180deg, #F5F7FA 0%, #C8CDD4 40%, #8A8E96 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  position: relative;
+  z-index: 2;
+}
+
+/* ---------------------------------------------------------------
+   Números circulares del proceso de voluntariado (paso 1, 2, 3)
+   --------------------------------------------------------------- */
+.volunteer-circle-number {
+  width: 64px;
+  height: 64px;
+  background: var(--color-ambar);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1.5rem;
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: var(--color-cafe);
+  flex-shrink: 0;
+}
+
+/* ---------------------------------------------------------------
+   Preview tipográficos en manual-grafico.html
+   (reemplazan los font-family inline en los placeholders de logos)
+   --------------------------------------------------------------- */
+.manual-preview-text {
+  margin: 0;
+  text-align: center;
+  line-height: 1.3;
+  font-weight: 700;
+  /* font-family hereda de la tipografía global (--font-titulo / Cormorant Garamond) */
+}
+
+.manual-preview-fdg  { color: #B07BE8; font-size: 1.6rem; }
+.manual-preview-gotr { color: #CC2200; font-size: 1.5rem; letter-spacing: 0.05em; }
+.manual-preview-gae  { color: #7AB8D4; font-size: 1.5rem; }
+.manual-preview-trova { color: #E85D24; font-size: 1.8rem; }
+
+/* ===============================================================
+   V3 — CAMBIO 2: MANUAL GRÁFICO — NARRATIVA + SUBSECCIONES
+   =============================================================== */
+
+/* ---------------------------------------------------------------
+   Bloque narrativo histórico de la identidad TDG
+   --------------------------------------------------------------- */
+.manual-narrativa {
+  max-width: 880px;
+  margin: 0 auto var(--sp-16);
+  padding: var(--sp-8);
+  background: var(--color-blanco);
+  border-radius: var(--radius-lg);
+  border: 1px solid rgba(53, 33, 18, 0.08);
+}
+
+.manual-narrativa__title {
+  font-family: var(--font-titulo);
+  color: var(--color-cafe);
+  font-size: clamp(1.5rem, 3vw, 2rem);
+  text-align: center;
+  margin-bottom: var(--sp-8);
+}
+
+.manual-narrativa__timeline {
+  display: grid;
+  gap: var(--sp-6);
+}
+
+@media (min-width: 768px) {
+  .manual-narrativa__timeline {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.manual-narrativa__step {
+  position: relative;
+  padding-left: var(--sp-4);
+  border-left: 3px solid var(--color-ambar);
+}
+
+.manual-narrativa__year {
+  display: inline-block;
+  font-family: var(--font-display);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--color-ambar);
+  margin-bottom: var(--sp-2);
+}
+
+.manual-narrativa__step h4 {
+  font-family: var(--font-titulo);
+  font-size: 1.2rem;
+  color: var(--color-cafe);
+  margin-bottom: var(--sp-2);
+  line-height: 1.2;
+}
+
+.manual-narrativa__step p {
+  font-size: 0.95rem;
+  color: var(--color-cafe-claro);
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* ---------------------------------------------------------------
+   Subsecciones del manual (Oficiales / En desarrollo)
+   --------------------------------------------------------------- */
+.manual-subsection {
+  margin-bottom: var(--sp-16);
+}
+
+.manual-subsection__title {
+  font-family: var(--font-titulo);
+  font-size: clamp(1.6rem, 3vw, 2.2rem);
+  color: var(--color-cafe);
+  margin-bottom: var(--sp-3);
+  padding-bottom: var(--sp-3);
+  border-bottom: 2px solid var(--color-ambar);
+}
+
+.manual-subsection__intro {
+  color: var(--color-cafe-claro);
+  margin-bottom: var(--sp-8);
+  font-size: 1rem;
+}
+
+.manual-subsection--en-desarrollo .manual-subsection__title {
+  border-bottom-color: var(--color-cafe-claro);
+  opacity: 0.9;
+}
+
+/* ---------------------------------------------------------------
+   Estado "en desarrollo" — reemplaza el botón de descarga
+   en Trova 2018 y BDLN
+   --------------------------------------------------------------- */
+.manual-identidad__en-desarrollo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.9rem 1.2rem;
+  background: rgba(107, 74, 42, 0.08);
+  border: 1px dashed rgba(107, 74, 42, 0.3);
+  border-radius: var(--radius-md);
+  color: var(--color-cafe-claro);
+  font-family: var(--font-display);
+  font-size: 0.85rem;
+  font-style: italic;
+  margin-top: auto;
+  user-select: none;
+}
+
+/* Variante oscura para la tarjeta BDLN */
+.manual-identidad--bdln .manual-identidad__en-desarrollo {
+  background: rgba(200, 205, 212, 0.08);
+  border-color: rgba(200, 205, 212, 0.25);
+  color: var(--bdln-silver);
+  font-style: normal;
+  font-family: 'Courier New', monospace;
+  letter-spacing: 0.08em;
+}
+
+
+/* ===============================================================
+   v4 — BDLN Figcaption tipografía (planetas en galería)
+   =============================================================== */
+.bdln-cap figcaption {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.bdln-cap__num {
+  font-family: 'Courier New', monospace;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  font-size: 0.7rem;
+  color: rgba(200,205,212,0.7);
+}
+
+.bdln-cap__planet {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  color: #E8EAEE;
+  letter-spacing: 0.1em;
+}
+
+.bdln-cap__subtitle {
+  font-family: var(--font-cuerpo);
+  font-size: 0.78rem;
+  font-style: italic;
+  color: rgba(212,165,116,0.85);
+}
+
+/* Variantes de color por planeta */
+.bdln-cap--frio  .bdln-cap__planet { color: #A8D8EA; }
+.bdln-cap--ignia .bdln-cap__planet { color: #F4A261; }
+
+
+/* ===============================================================
+   v4 — Lista de planetas conocidos (Manual Gráfico — BDLN)
+   =============================================================== */
+.bdln-planetas-conocidos {
+  margin-top: var(--sp-5);
+  padding: var(--sp-4);
+  background: rgba(10,16,40,0.6);
+  border-radius: var(--radius-md);
+  border: 1px solid rgba(200,205,212,0.1);
+}
+
+.bdln-planetas-titulo {
+  font-family: 'Courier New', monospace;
+  font-size: 0.72rem;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: rgba(200,205,212,0.6);
+  margin-bottom: var(--sp-3);
+}
+
+.bdln-planetas-lista {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-2);
+}
+
+.bdln-planeta {
+  display: flex;
+  align-items: baseline;
+  gap: var(--sp-3);
+  padding: var(--sp-2) 0;
+  border-bottom: 1px solid rgba(200,205,212,0.08);
+}
+
+.bdln-planeta:last-child {
+  border-bottom: none;
+}
+
+.bdln-planeta__num {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 0.8rem;
+  color: rgba(200,205,212,0.5);
+  min-width: 24px;
+}
+
+.bdln-planeta__name {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #C8CDD4;
+  letter-spacing: 0.08em;
+}
+
+.bdln-planeta__desc {
+  font-family: var(--font-cuerpo);
+  font-size: 0.82rem;
+  font-style: italic;
+  color: rgba(212,165,116,0.75);
+  margin-left: var(--sp-2);
+}
+
+.bdln-planeta--frio  .bdln-planeta__name { color: #A8D8EA; }
+.bdln-planeta--ignia .bdln-planeta__name { color: #F4A261; }
+
+
+/* ===============================================================
+   v4 — Video thumbnail (componente reutilizable)
+   =============================================================== */
+.video-thumbnail {
+  display: block;
+  position: relative;
+  overflow: hidden;
+  border-radius: var(--radius-md);
+  aspect-ratio: 16/9;
+  background: #000;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.video-thumbnail__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease, filter 0.4s ease;
+  filter: brightness(0.85);
+}
+
+.video-thumbnail:hover .video-thumbnail__img {
+  transform: scale(1.05);
+  filter: brightness(1);
+}
+
+.video-thumbnail__play {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 68px;
+  height: 48px;
+  opacity: 0.9;
+  transition: opacity 0.25s ease, transform 0.25s ease;
+  filter: drop-shadow(0 2px 8px rgba(0,0,0,0.5));
+}
+
+.video-thumbnail:hover .video-thumbnail__play {
+  opacity: 1;
+  transform: translate(-50%, -50%) scale(1.08);
+}
+
+/* Dentro de card-programa */
+.card-programa__video {
+  min-height: 180px;
+}
+
+.card-programa__video .video-thumbnail {
+  border-radius: var(--radius-md) var(--radius-md) 0 0;
+  height: 100%;
+  min-height: 180px;
+  aspect-ratio: unset;
+}
+
+/* Placeholder "pendiente" — no clickeable */
+.video-thumbnail--pendiente {
+  pointer-events: none;
+  cursor: default;
+}
+
+.video-thumbnail__placeholder {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: var(--sp-3);
+  width: 100%;
+  height: 100%;
+  min-height: 200px;
+  background: linear-gradient(135deg, rgba(53,33,18,0.08) 0%, rgba(53,33,18,0.03) 100%);
+  color: var(--color-cafe-claro);
+  font-family: var(--font-display);
+  font-size: 0.85rem;
+  font-style: italic;
+  opacity: 0.7;
+}
+
+
+/* ===============================================================
+   v4 — Colaboraciones con video
+   =============================================================== */
+.colab-card--video .colab-card__img {
+  display: none;
+}
+
+.colab-card__media {
+  aspect-ratio: 16/10;
+  overflow: hidden;
+  background: #0A0A0A;
+  border-radius: var(--radius-lg) var(--radius-lg) 0 0;
+}
+
+.colab-card__media .video-thumbnail {
+  border-radius: var(--radius-lg) var(--radius-lg) 0 0;
+  height: 100%;
+  aspect-ratio: unset;
+}
+
+.colab-card__video-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  margin-top: var(--sp-3);
+  font-family: var(--font-display);
+  font-size: 0.88rem;
+  font-weight: 700;
+  color: var(--color-cafe);
+  text-decoration: none;
+  border-bottom: 2px solid var(--color-ambar);
+  padding-bottom: 2px;
+  transition: color 0.2s ease;
+}
+
+.colab-card__video-link:hover {
+  color: var(--color-ambar);
+}
+
+.colab-card--pendiente {
+  opacity: 0.7;
+  border-style: dashed;
+}

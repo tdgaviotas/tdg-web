@@ -1,0 +1,483 @@
+/* ================================================================
+   FUNDACIÓN CULTURAL TIERRA DE GAVIOTAS — responsive.css
+   Media queries mobile-first
+   ================================================================ */
+
+/* ---------------------------------------------------------------
+   BASE (320px+) — Estilos móvil, ya en main.css/components.css
+   --------------------------------------------------------------- */
+
+/* Asegurar padding del body para no quedar detrás del navbar */
+body {
+  padding-top: var(--navbar-h);
+}
+
+/* Evitar padding-top en el hero (ya tiene padding-top interno) */
+.hero,
+.page-hero {
+  margin-top: calc(-1 * var(--navbar-h));
+  padding-top: calc(var(--navbar-h) + var(--sp-12));
+}
+
+.hero {
+  padding-top: var(--navbar-h);
+  margin-top: 0;
+}
+
+
+/* ---------------------------------------------------------------
+   HASTA 767px (Móvil solo)
+   --------------------------------------------------------------- */
+@media (max-width: 767px) {
+
+  /* === Navbar === */
+  .navbar__hamburger {
+    display: flex;
+  }
+
+  .navbar__nav {
+    position: fixed;
+    top: var(--navbar-h);
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: var(--color-cafe-oscuro);
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: stretch;
+    padding: var(--sp-6);
+    gap: 0;
+    transform: translateX(100%);
+    transition: transform var(--t-base);
+    overflow-y: auto;
+    z-index: 999;
+  }
+
+  .navbar__nav.nav-open {
+    transform: translateX(0);
+  }
+
+  .navbar__list {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+    margin-bottom: var(--sp-6);
+  }
+
+  .navbar__link {
+    display: block;
+    padding: var(--sp-4) var(--sp-4);
+    font-size: 1.15rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+    border-radius: 0;
+  }
+
+  .navbar__link::after {
+    display: none;
+  }
+
+  .navbar__cta {
+    width: 100%;
+    justify-content: center;
+    padding: var(--sp-4);
+    font-size: 1rem;
+  }
+
+  /* === Hero === */
+  .hero {
+    min-height: 85vh;
+  }
+
+  .hero__ctas {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .hero__ctas .btn {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .hero__scroll {
+    display: none;
+  }
+
+  /* === Impact === */
+  .impact__grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--sp-6);
+  }
+
+  .impact__divider {
+    display: none;
+  }
+
+  /* === Grids === */
+  .grid-2,
+  .grid-3,
+  .grid-4 {
+    grid-template-columns: 1fr;
+  }
+
+  /* === About === */
+  .about-grid {
+    grid-template-columns: 1fr;
+    gap: var(--sp-8);
+  }
+
+  .about-grid--reverse .about-img {
+    order: 0;
+  }
+
+  .about-img {
+    min-height: 250px;
+  }
+
+  /* === Misión Visión === */
+  .mision-vision {
+    grid-template-columns: 1fr;
+  }
+
+  /* === Símbolo === */
+  .simbolo-inner {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  /* === Embajador === */
+  .embajador {
+    grid-template-columns: 1fr;
+    text-align: center;
+    padding: var(--sp-6);
+  }
+
+  .embajador__photo {
+    margin-inline: auto;
+  }
+
+  .embajador::before {
+    display: none;
+  }
+
+  /* === Footer === */
+  .footer__grid {
+    grid-template-columns: 1fr;
+    gap: var(--sp-8);
+  }
+
+  .footer__tagline {
+    max-width: 100%;
+  }
+
+  .footer__bottom {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  /* === Formulario === */
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+
+  .form-contact {
+    padding: var(--sp-5);
+  }
+
+  .form-submit {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .form-submit .btn {
+    width: 100%;
+    justify-content: center;
+  }
+
+  /* === Cards horizontales → verticales === */
+  .card-programa--horizontal {
+    flex-direction: column;
+  }
+
+  .card-programa--horizontal .card-programa__img {
+    width: 100%;
+    aspect-ratio: 16/9;
+  }
+
+  /* === Breadcrumb === */
+  .breadcrumb {
+    flex-wrap: wrap;
+  }
+
+  /* === CTA Banner === */
+  .cta-banner__btns {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  /* === Sección === */
+  .section {
+    padding-block: var(--sp-10);
+  }
+
+  /* === Tipografía responsive === */
+  .container {
+    --container-px: 1rem;
+  }
+}
+
+
+/* ---------------------------------------------------------------
+   SM 480px+
+   --------------------------------------------------------------- */
+@media (min-width: 480px) {
+
+  .hero__ctas {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .hero__ctas .btn {
+    width: auto;
+  }
+
+  .impact__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+
+/* ---------------------------------------------------------------
+   MD 768px+ (Tablet)
+   --------------------------------------------------------------- */
+@media (min-width: 768px) {
+
+  /* Navbar — desktop layout */
+  .navbar__hamburger {
+    display: none;
+  }
+
+  .navbar__nav {
+    position: static;
+    transform: none;
+    background: transparent;
+    flex-direction: row;
+    padding: 0;
+    overflow: visible;
+  }
+
+  .navbar__list {
+    flex-direction: row;
+    gap: 0;
+    margin-bottom: 0;
+  }
+
+  .navbar__link {
+    font-size: 0.88rem;
+    padding: 0.5rem 0.7rem;
+    border-bottom: none;
+  }
+
+  /* Grids tablet */
+  .grid-auto-3 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .grid-auto-4 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* Impact */
+  .impact__grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  /* About */
+  .about-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: var(--sp-10);
+  }
+
+  /* Misión visión */
+  .mision-vision {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  /* Footer */
+  .footer__grid {
+    grid-template-columns: 1fr 1fr;
+    gap: var(--sp-8);
+  }
+
+  /* Formulario */
+  .form-row {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  /* Embajador */
+  .embajador {
+    grid-template-columns: auto 1fr;
+  }
+
+  /* Símbolo */
+  .simbolo-inner {
+    grid-template-columns: 200px 1fr;
+    text-align: left;
+  }
+
+  /* Voluntariado */
+  .voluntariado-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* Cards programa */
+  .grid-auto-3 .card-programa {
+    /* 2 columns at tablet */
+  }
+}
+
+
+/* ---------------------------------------------------------------
+   LG 1024px+ (Desktop pequeño)
+   --------------------------------------------------------------- */
+@media (min-width: 1024px) {
+
+  /* Sección */
+  .section {
+    padding-block: var(--sp-20);
+  }
+
+  /* Grids */
+  .grid-auto-3 {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .grid-auto-4 {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  /* Footer */
+  .footer__grid {
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+    gap: var(--sp-10);
+  }
+
+  /* Navbar links */
+  .navbar__link {
+    font-size: 0.9rem;
+    padding: 0.5rem 0.85rem;
+  }
+
+  /* Voluntariado */
+  .voluntariado-grid {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  }
+
+  /* Símbolo */
+  .simbolo-inner {
+    grid-template-columns: 260px 1fr;
+  }
+}
+
+
+/* ---------------------------------------------------------------
+   XL 1200px+ (Desktop estándar)
+   --------------------------------------------------------------- */
+@media (min-width: 1200px) {
+
+  :root {
+    --container-px: 2rem;
+  }
+
+  /* Impact - añadir divisores verticales */
+  .impact__grid {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .impact__item {
+    flex: 1;
+    padding: 0 var(--sp-6);
+  }
+
+  .impact__item:not(:last-child)::after {
+    content: '';
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 20%;
+    height: 60%;
+    width: 1px;
+    background: rgba(255, 255, 255, 0.12);
+  }
+
+  .impact__item {
+    position: relative;
+  }
+
+  /* Grid 4 columnas */
+  .grid-auto-4 {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+
+/* ---------------------------------------------------------------
+   2XL 1400px+
+   --------------------------------------------------------------- */
+@media (min-width: 1400px) {
+
+  :root {
+    --max-width: 1300px;
+  }
+}
+
+
+/* ---------------------------------------------------------------
+   PRINT
+   --------------------------------------------------------------- */
+@media print {
+  .navbar,
+  .hero__scroll,
+  .navbar__hamburger,
+  .footer__aliados,
+  .btn--outline-white,
+  .social-list {
+    display: none !important;
+  }
+
+  body {
+    padding-top: 0;
+    font-size: 12pt;
+    color: #000;
+  }
+
+  .hero {
+    min-height: auto;
+    padding: var(--sp-8) 0;
+  }
+
+  a[href]::after {
+    content: ' (' attr(href) ')';
+    font-size: 0.7em;
+    color: #555;
+  }
+}
+
+
+/* ---------------------------------------------------------------
+   MOTION REDUCE
+   --------------------------------------------------------------- */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+
+  .reveal {
+    opacity: 1;
+    transform: none;
+  }
+}

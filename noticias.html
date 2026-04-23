@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- ════════════════════════════════════════════════════
+       PÁGINA DESACTIVADA TEMPORALMENTE
+       Para reactivar: eliminar la línea noindex, restaurar
+       el bloque <main> desde los comentarios y volver a
+       agregar "Noticias" en el navbar de todas las páginas.
+       ════════════════════════════════════════════════════ -->
+  <meta name="robots" content="noindex, nofollow">
+  <title>Noticias — Próximamente | Fundación Cultural Tierra de Gaviotas</title>
+  <meta name="description" content="La sección de Noticias de la Fundación Cultural Tierra de Gaviotas estará disponible próximamente.">
+  <link rel="canonical" href="https://tierradegaviotas.cl/noticias.html">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://tierradegaviotas.cl/noticias.html">
+  <meta property="og:title" content="Noticias | Fundación Cultural Tierra de Gaviotas">
+  <meta property="og:description" content="Noticias y actualizaciones de la Fundación Cultural Tierra de Gaviotas, Ancud, Chiloé.">
+  <meta property="og:image" content="https://tierradegaviotas.cl/images/og-image.jpg">
+  <meta property="og:locale" content="es_CL">
+  <meta property="og:site_name" content="Fundación Cultural Tierra de Gaviotas">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@tdgaviotas">
+  <meta name="twitter:image" content="https://tierradegaviotas.cl/images/og-image.jpg">
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <meta name="theme-color" content="#352112">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,600;0,700;1,700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Source+Serif+4:opsz,wght@8..60,300;8..60,400;8..60,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/components-v2.css">
+  <link rel="stylesheet" href="css/responsive.css">
+
+  <style>
+    /* Estilos específicos de la página de noticias */
+    .noticias-featured {
+      background: var(--color-blanco);
+      border-radius: var(--radius-xl);
+      overflow: hidden;
+      box-shadow: var(--shadow-lg);
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      margin-bottom: var(--sp-10);
+    }
+    .noticias-featured__img {
+      background: linear-gradient(135deg, var(--color-cafe) 0%, var(--color-cafe-mid) 100%);
+      min-height: 340px;
+      overflow: hidden;
+    }
+    .noticias-featured__img img {
+      width: 100%; height: 100%; object-fit: cover;
+    }
+    .noticias-featured__body {
+      padding: var(--sp-10);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+    .noticias-featured__meta {
+      display: flex; gap: var(--sp-4); align-items: center;
+      font-size: 0.8rem;
+      color: var(--color-cafe-claro); margin-bottom: var(--sp-4);
+    }
+    .noticias-featured__cat {
+      color: var(--color-ambar); font-weight: 700;
+      text-transform: uppercase; letter-spacing: 0.08em;
+    }
+    .noticias-featured__title {
+      font-size: clamp(1.4rem, 3vw, 2rem);
+      font-weight: 700; color: var(--color-cafe);
+      line-height: 1.25; margin-bottom: var(--sp-4);
+    }
+    .noticias-featured__excerpt {
+      color: var(--color-cafe-claro); line-height: 1.7;
+      margin-bottom: var(--sp-6);
+    }
+    @media (max-width: 767px) {
+      .noticias-featured { grid-template-columns: 1fr; }
+      .noticias-featured__img { min-height: 220px; }
+      .noticias-featured__body { padding: var(--sp-6); }
+    }
+
+    /* Instrucciones de actualización */
+    .instrucciones-box {
+      background: linear-gradient(135deg, rgba(255,182,0,0.08), rgba(255,182,0,0.04));
+      border: 2px dashed rgba(255,182,0,0.35);
+      border-radius: var(--radius-lg);
+      padding: var(--sp-6) var(--sp-8);
+      margin-bottom: var(--sp-8);
+    }
+    .instrucciones-box__title {
+      font-size: 0.82rem; font-weight: 700;
+      letter-spacing: 0.12em; text-transform: uppercase;
+      color: var(--color-ambar); margin-bottom: var(--sp-3);
+    }
+    .instrucciones-box p { font-size: 0.9rem; color: var(--color-cafe-claro); }
+    .instrucciones-box code {
+      background: rgba(53,33,18,0.08); border-radius: 4px;
+      padding: 0.1em 0.4em; font-size: 0.85em; color: var(--color-cafe);
+    }
+  </style>
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Ir al contenido principal</a>
+
+  <header class="navbar" id="navbar" role="banner">
+    <div class="container navbar__inner">
+      <a href="index.html" class="navbar__logo" aria-label="Inicio">
+        <img src="images/logo/TDG_1_Horizontal_-_Para_fondo_oscuro.png" alt="Tierra de Gaviotas" class="navbar__logo-img" width="200" height="55" onerror="this.style.display='none';this.nextElementSibling.style.display='block'">
+        <span class="navbar__logo-fallback" style="display:none">Tierra de <span>Gaviotas</span></span>
+      </a>
+      <button class="navbar__hamburger" id="menuToggle" aria-expanded="false" aria-controls="navMenu" aria-label="Abrir menú">
+        <span class="navbar__hamburger-line"></span><span class="navbar__hamburger-line"></span><span class="navbar__hamburger-line"></span>
+      </button>
+      <nav class="navbar__nav" id="navMenu" role="navigation" aria-label="Navegación principal">
+        <ul class="navbar__list">
+          <li><a href="index.html"        class="navbar__link">Inicio</a></li>
+          <li><a href="nosotros.html"     class="navbar__link">Nosotros</a></li>
+          <li><a href="programas.html"    class="navbar__link">Programas</a></li>
+          <li><a href="voluntariado.html" class="navbar__link">Voluntariado</a></li>
+          <!-- Noticias: desactivado temporalmente — quitar comentario para reactivar
+          <li><a href="noticias.html"     class="navbar__link" aria-current="page">Noticias</a></li>
+          -->
+          <li><a href="manual-grafico.html" class="navbar__link">Manual gráfico</a></li>
+          <li><a href="contacto.html"     class="navbar__link">Contacto</a></li>
+        </ul>
+        <a href="donaciones.html" class="btn btn--ambar navbar__cta">Apóyanos</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main-content" role="main">
+
+    <!-- ═══════════════════════════════════════════════════════════════
+         PÁGINA TEMPORALMENTE DESACTIVADA — PRÓXIMAMENTE
+         Para reactivar: restaurar el bloque comentado a continuación
+         ═══════════════════════════════════════════════════════════════ -->
+
+    <!-- Página "Próximamente" — visible mientras Noticias esté desactivada -->
+    <section class="section bg-crema" style="min-height: 60vh; display: flex; align-items: center;">
+      <div class="container" style="text-align: center; max-width: 600px; margin-inline: auto;">
+        <span class="label" style="display: block; margin-bottom: var(--sp-4);">Actualidad</span>
+        <h1 style="font-size: clamp(2rem, 5vw, 3rem); color: var(--color-cafe); margin-bottom: var(--sp-4);">
+          Noticias y novedades
+        </h1>
+        <p style="font-size: 1.1rem; color: var(--color-cafe-claro); line-height: 1.7; margin-bottom: var(--sp-6);">
+          Esta sección estará disponible muy pronto. Mientras tanto,
+          síguenos en nuestras redes sociales para estar al día de todo
+          lo que ocurre en Tierra de Gaviotas.
+        </p>
+        <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; margin-bottom: var(--sp-8);">
+          <a href="https://instagram.com/tdgaviotas" target="_blank" rel="noopener noreferrer"
+             class="btn btn--cafe" aria-label="Seguir en Instagram">
+            Instagram @tdgaviotas
+          </a>
+          <a href="https://facebook.com/tdgaviotas" target="_blank" rel="noopener noreferrer"
+             class="btn btn--outline btn--cafe" aria-label="Seguir en Facebook">
+            Facebook /tdgaviotas
+          </a>
+        </div>
+        <a href="index.html" class="btn btn--ambar btn--lg">Volver al inicio</a>
+      </div>
+    </section>
+
+    <!--
+    ═══════════════════════════════════════════════════════════════
+    CONTENIDO ORIGINAL — NOTICIAS (DESACTIVADO TEMPORALMENTE)
+    Para reactivar:
+    1. Eliminar la sección "Próximamente" de arriba
+    2. Descomentar el bloque a continuación
+    3. Restaurar "Noticias" en el navbar de todas las páginas
+    4. Eliminar <meta name="robots" content="noindex, nofollow"> del <head>
+    ═══════════════════════════════════════════════════════════════
+
+    <!-- SECCIÓN ORIGINAL — oculta con display:none para fácil reactivación -->
+    <section class="section bg-crema" aria-labelledby="news-title" style="display:none" aria-hidden="true">
+      <div class="container">
+
+        <!-- Instrucciones para el equipo TDG -->
+        <div class="instrucciones-box reveal">
+          <p class="instrucciones-box__title">📝 Cómo agregar una noticia (para el equipo TDG)</p>
+          <p>
+            Para agregar una noticia nueva: abrir este archivo en GitHub → hacer clic en el ícono del lápiz →
+            copiar un bloque <code>&lt;!-- INICIO NOTICIA --&gt; ... &lt;!-- FIN NOTICIA --&gt;</code> →
+            pegarlo <strong>antes</strong> del primer bloque existente → cambiar título, fecha, categoría y texto →
+            hacer clic en "Commit changes". El sitio se actualizará en 3-5 minutos.
+          </p>
+        </div>
+
+        <p class="sr-only" id="news-title">Lista de noticias de la Fundación</p>
+
+        <!-- NOTICIA DESTACADA -->
+        <!-- INICIO NOTICIA DESTACADA -->
+        <article class="noticias-featured reveal" aria-label="Noticia destacada">
+          <div class="noticias-featured__img">
+            <!-- [PLACEHOLDER: Imagen de la noticia destacada. Nombre: images/noticias/noticia-destacada-01.jpg] -->
+            <img src="images/noticias/noticia-destacada-01.jpg"
+                 alt="[PLACEHOLDER: Descripción de la imagen de la noticia destacada]"
+                 loading="lazy"
+                 data-placeholder-text="[PLACEHOLDER: Imagen noticia destacada]">
+          </div>
+          <div class="noticias-featured__body">
+            <div class="noticias-featured__meta">
+              <!-- [PLACEHOLDER: Cambiar categoría y fecha de la noticia] -->
+              <span class="noticias-featured__cat">[Categoría]</span>
+              <span>[DD de Mes de AAAA]</span>
+            </div>
+            <h2 class="noticias-featured__title">
+              <!-- [PLACEHOLDER: Título de la noticia destacada] -->
+              [PLACEHOLDER: Título de la noticia más reciente]
+            </h2>
+            <p class="noticias-featured__excerpt">
+              <!-- [PLACEHOLDER: Resumen de 2-3 oraciones de la noticia] -->
+              [PLACEHOLDER: Breve descripción de la noticia. Máximo 3 oraciones que inviten a leer más.
+              Puede ser sobre el festival, un nuevo taller, una alianza, un logro institucional, etc.]
+            </p>
+            <a href="#" class="btn btn--cafe">
+              <!-- [PLACEHOLDER: Si hay URL del artículo completo, reemplazar #] -->
+              Leer más
+            </a>
+          </div>
+        </article>
+        <!-- FIN NOTICIA DESTACADA -->
+
+        <!-- GRID DE NOTICIAS -->
+        <h2 class="sr-only">Todas las noticias</h2>
+        <div class="grid grid-auto-3">
+
+          <!-- INICIO NOTICIA -->
+          <article class="card-noticia reveal">
+            <div class="card-noticia__img">
+              <!-- [PLACEHOLDER: Imagen de la noticia 1. Nombre: images/noticias/noticia-01.jpg] -->
+              <img src="images/noticias/noticia-01.jpg"
+                   alt="[PLACEHOLDER: Descripción imagen noticia 1]"
+                   loading="lazy"
+                   data-placeholder-text="[PLACEHOLDER: Foto noticia]">
+            </div>
+            <div class="card-noticia__body">
+              <div class="card-noticia__meta">
+                <span class="card-noticia__cat">[Categoría]</span>
+                <span>[Fecha]</span>
+              </div>
+              <h3 class="card-noticia__title">
+                [PLACEHOLDER: Título de la noticia 1]
+              </h3>
+              <p class="card-noticia__excerpt">
+                [PLACEHOLDER: Extracto breve de la noticia 1. Describir en 2-3 líneas el contenido principal.]
+              </p>
+              <a href="#" class="card-noticia__link">Leer más</a>
+            </div>
+          </article>
+          <!-- FIN NOTICIA -->
+
+          <!-- INICIO NOTICIA -->
+          <article class="card-noticia reveal reveal-delay-1">
+            <div class="card-noticia__img">
+              <img src="images/noticias/noticia-02.jpg"
+                   alt="[PLACEHOLDER: Descripción imagen noticia 2]"
+                   loading="lazy"
+                   data-placeholder-text="[PLACEHOLDER: Foto noticia]">
+            </div>
+            <div class="card-noticia__body">
+              <div class="card-noticia__meta">
+                <span class="card-noticia__cat">[Categoría]</span>
+                <span>[Fecha]</span>
+              </div>
+              <h3 class="card-noticia__title">
+                [PLACEHOLDER: Título de la noticia 2]
+              </h3>
+              <p class="card-noticia__excerpt">
+                [PLACEHOLDER: Extracto breve de la noticia 2.]
+              </p>
+              <a href="#" class="card-noticia__link">Leer más</a>
+            </div>
+          </article>
+          <!-- FIN NOTICIA -->
+
+          <!-- INICIO NOTICIA -->
+          <article class="card-noticia reveal reveal-delay-2">
+            <div class="card-noticia__img">
+              <img src="images/noticias/noticia-03.jpg"
+                   alt="[PLACEHOLDER: Descripción imagen noticia 3]"
+                   loading="lazy"
+                   data-placeholder-text="[PLACEHOLDER: Foto noticia]">
+            </div>
+            <div class="card-noticia__body">
+              <div class="card-noticia__meta">
+                <span class="card-noticia__cat">[Categoría]</span>
+                <span>[Fecha]</span>
+              </div>
+              <h3 class="card-noticia__title">
+                [PLACEHOLDER: Título de la noticia 3]
+              </h3>
+              <p class="card-noticia__excerpt">
+                [PLACEHOLDER: Extracto breve de la noticia 3.]
+              </p>
+              <a href="#" class="card-noticia__link">Leer más</a>
+            </div>
+          </article>
+          <!-- FIN NOTICIA -->
+
+        </div>
+
+        <!-- Mensaje cuando no haya más noticias -->
+        <div class="text-center reveal" style="margin-top: 3rem; padding: 2rem; background: var(--color-blanco); border-radius: var(--radius-lg);">
+          <p style="color: var(--color-cafe-claro); margin-bottom: 1rem;">
+            Para estar al tanto de todas nuestras novedades en tiempo real, síguenos en redes sociales.
+          </p>
+          <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+            <a href="https://instagram.com/tdgaviotas" target="_blank" rel="noopener noreferrer" class="btn btn--outline btn--sm">Instagram @tdgaviotas</a>
+            <a href="https://facebook.com/tdgaviotas" target="_blank" rel="noopener noreferrer" class="btn btn--outline btn--sm">Facebook /tdgaviotas</a>
+            <a href="https://youtube.com/@tdgaviotas" target="_blank" rel="noopener noreferrer" class="btn btn--outline btn--sm">YouTube @tdgaviotas</a>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer" role="contentinfo">
+    <div class="footer__top"><div class="container footer__grid">
+      <div><a href="index.html"><img src="images/logo/TDG_1_Horizontal_-_Para_fondo_oscuro.png" alt="Tierra de Gaviotas" class="footer__brand-logo" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='block'"><span class="footer__brand-logo-fallback" style="display:none">Tierra de Gaviotas</span></a><p class="footer__tagline">Fundación cultural sin fines de lucro desde Ancud, Chiloé.</p><nav aria-label="Redes sociales"><ul class="social-list"><li><a href="https://instagram.com/tdgaviotas" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Instagram"><svg fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg></a></li><li><a href="https://facebook.com/tdgaviotas" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Facebook"><svg fill="currentColor" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg></a></li><li><a href="https://youtube.com/@tdgaviotas" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="YouTube"><svg fill="currentColor" viewBox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 00-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 00.502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 002.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 002.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg></a></li></ul></nav></div>
+      <nav aria-label="Mapa del sitio"><p class="footer__col-title">Sitio web</p><ul class="footer__nav"><li><a href="index.html">Inicio</a></li><li><a href="nosotros.html">Nosotros</a></li><li><a href="programas.html">Programas</a></li><li><a href="voluntariado.html">Voluntariado</a></li><li><a href="donaciones.html">Apóyanos</a></li><li><a href="contacto.html">Contacto</a></li></ul></nav>
+      <nav aria-label="Programas"><p class="footer__col-title">Programas</p><ul class="footer__nav"><li><a href="programas.html#festival">Festival de Gaviotas</a></li><li><a href="programas.html#rock">Gaviotas on the Rock</a></li><li><a href="programas.html#talleres">Talleres Gratuitos</a></li><li><a href="programas.html#borderline">Borderline_CL</a></li><li><a href="programas.html#vinculacion">Vinculación Territorial</a></li><li><a href="nosotros.html#acreditaciones">Transparencia</a></li></ul></nav>
+      <div><p class="footer__col-title">Contacto</p><ul class="footer__contact-list"><li class="footer__contact-item"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg><a href="mailto:contacto@tierradegaviotas.cl">contacto@tierradegaviotas.cl</a></li><li class="footer__contact-item"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg><a href="https://wa.me/56991042738" target="_blank" rel="noopener noreferrer">+56 9 9104 2738 (WhatsApp)</a></li></ul></div>
+    </div></div>
+    <div class="footer__aliados"><div class="container"><p class="footer__aliados-title">Con respaldo tecnológico de</p><div class="footer__aliados-logos"><span class="footer__aliado-item"><span class="footer__aliado-icon">🔵</span><span class="footer__aliado-name">Google Workspace</span></span><span class="footer__aliado-item"><span class="footer__aliado-icon">🟦</span><span class="footer__aliado-name">Microsoft Azure</span></span><span class="footer__aliado-item"><span class="footer__aliado-icon">🟠</span><span class="footer__aliado-name">Cloudflare</span></span><span class="footer__aliado-item"><span class="footer__aliado-icon">🎨</span><span class="footer__aliado-name">Canva</span></span><span class="footer__aliado-item"><span class="footer__aliado-icon">🔐</span><span class="footer__aliado-name">Okta</span></span><span class="footer__aliado-item"><span class="footer__aliado-icon">🔴</span><span class="footer__aliado-name">Adobe</span></span><span class="footer__aliado-item"><span class="footer__aliado-icon">⬛</span><span class="footer__aliado-name">GitHub</span></span><span class="footer__aliado-item"><span class="footer__aliado-icon">🤖</span><span class="footer__aliado-name">Claude AI</span></span><span class="footer__aliado-item"><span class="footer__aliado-icon">💬</span><span class="footer__aliado-name">ChatGPT</span></span></div></div></div>
+    <div class="container footer__bottom"><p class="footer__legal">© 2025 Fundación Cultural Tierra de Gaviotas · Inscripción N° 336270 · SRCeI Chile · <a href="nosotros.html#acreditaciones">Transparencia</a></p><p class="footer__rut">RUT 65.216.893-0</p></div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script src="js/components.js"></script>
+</body>
+</html>

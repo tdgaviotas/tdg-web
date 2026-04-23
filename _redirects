@@ -1,0 +1,5 @@
+# Forzar HTTPS y eliminar www
+# Cloudflare Pages gestiona HTTPS automáticamente, estas reglas son redundancia.
+/noticias / 302
+/noticias.html / 302
+/news / 302
