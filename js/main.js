@@ -340,3 +340,18 @@ function debounce(fn, delay = 150) {
   $$('[data-color]').forEach(el => { el.style.color = el.getAttribute('data-color'); });
   $$('[data-border]').forEach(el => { el.style.border = el.getAttribute('data-border'); });
 })();
+
+
+/* ---------------------------------------------------------------
+   CONTACTO — mostrar mensaje de éxito tras redirect de Formspree
+   (sin inline script; compatible con CSP)
+   --------------------------------------------------------------- */
+(function initContactSuccessMessage() {
+  if (!window.location.search.includes('enviado=true')) return;
+
+  const msg = document.getElementById('form-success');
+  if (msg) msg.style.display = 'block';
+
+  const form = document.getElementById('contact-form');
+  if (form) form.style.display = 'none';
+})();

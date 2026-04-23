@@ -192,15 +192,6 @@
               </div>
             </form>
 
-            <script>
-              // Detectar parámetro ?enviado=true en la URL (redirect de Formspree)
-              if (window.location.search.includes('enviado=true')) {
-                const msg = document.getElementById('form-success');
-                if (msg) { msg.style.display = 'block'; }
-                const form = document.getElementById('contact-form');
-                if (form) { form.style.display = 'none'; }
-              }
-            </script>
           </div>
 
           <!-- Información de contacto -->
