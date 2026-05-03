@@ -87,6 +87,7 @@ body {
   background-color: var(--color-crema);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
 }
 
 img, video, svg {

@@ -225,6 +225,32 @@ body {
   }
 }
 
+/* ---------------------------------------------------------------
+   HASTA 360px (Pantallas muy pequeñas)
+   --------------------------------------------------------------- */
+@media (max-width: 360px) {
+  .footer__aliados-logos {
+    gap: var(--sp-3) var(--sp-4);
+  }
+  .footer__aliado-item {
+    font-size: 0.8rem;
+  }
+  .footer__aliado-logo {
+    width: 14px;
+    height: 14px;
+  }
+}
+
+/* ---------------------------------------------------------------
+   MÓVIL LANDSCAPE (poca altura)
+   --------------------------------------------------------------- */
+@media (max-height: 500px) {
+  .hero {
+    min-height: auto;
+    padding-block: var(--sp-6);
+  }
+}
+
 
 /* ---------------------------------------------------------------
    SM 480px+

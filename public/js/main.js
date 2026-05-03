@@ -319,4 +319,4 @@ function initDOM() {
    ARRANQUE
    --------------------------------------------------------------- */
 initDOM();
-document.addEventListener('astro:page-load', initDOM);
+document.addEventListener('astro:after-swap', initDOM);

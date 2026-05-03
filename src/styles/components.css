@@ -1723,6 +1723,7 @@
   position: relative;
   background: linear-gradient(135deg, var(--color-cafe) 0%, var(--color-cafe-mid) 100%);
   box-shadow: var(--shadow-xl);
+  min-height: 200px;
 }
 
 .about-img img {
