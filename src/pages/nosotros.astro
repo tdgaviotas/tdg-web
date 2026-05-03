@@ -1,0 +1,451 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+<BaseLayout
+  title="Nosotros | Fundación Cultural Tierra de Gaviotas"
+  description="Conoce la historia, misión, visión, directorio y acreditaciones oficiales de la Fundación Cultural Tierra de Gaviotas. Fundada en Ancud, Chiloé, desde 2017."
+  canonical="https://tierradegaviotas.cl/nosotros"
+>
+  <main id="main-content" role="main">
+
+    <!-- PAGE HERO — CAMBIO 3 -->
+    <section class="page-hero page-hero--nosotros" aria-labelledby="ph-title">
+      <div class="container page-hero__content">
+        <nav class="breadcrumb" aria-label="Ruta de navegación">
+          <a href="/">Inicio</a>
+          <span class="breadcrumb__sep" aria-hidden="true">›</span>
+          <span class="breadcrumb__current" aria-current="page">Nosotros</span>
+        </nav>
+        <span class="label">Nuestra historia</span>
+        <h1 id="ph-title">Una fundación enraizada en Chiloé</h1>
+        <p class="page-hero__sub">
+          Ocho años construyendo espacios culturales desde Ancud.
+        </p>
+      </div>
+    </section>
+
+    <!-- PRESENTACIÓN -->
+    <section class="section bg-crema" aria-labelledby="pres-title">
+      <div class="container">
+        <div class="about-grid">
+          <div class="about-content reveal">
+            <span class="label">Nuestra identidad</span>
+            <h2 id="pres-title" class="heading-line">Arte y cultura desde el corazón de Chiloé</h2>
+            <p>
+              Somos un equipo interdisciplinario que, desde 2017 en la comuna de Ancud, Chiloé,
+              y de forma autogestionada, hemos aunado voluntades para crear instancias de
+              intercambio multicultural, con el fin de potenciar distintas manifestaciones
+              artísticas y alzar el vuelo a nuestro corazón chiloense.
+            </p>
+            <p>
+              A fines de 2022 nos constituimos legalmente como fundación, lo que nos permite
+              mantener y seguir construyendo espacios donde las artes, la cultura, el patrimonio
+              y la comunidad sean el fundamento principal.
+            </p>
+            <p>
+              Nuestro enfoque es inclusivo: trabajamos con personas de todas las edades,
+              comunidades indígenas, personas con discapacidad, neurodivergentes, adultos
+              mayores y escuelas rurales del archipiélago.
+            </p>
+          </div>
+          <div class="about-img reveal reveal-delay-2">
+            <!-- [PLACEHOLDER: Foto representativa de la fundación o del paisaje de Chiloé. Nombre: images/equipo/fundacion-tdg.jpg] -->
+            <img src="/images/equipo/fundacion-tdg.jpg"
+                 alt="La Fundación Cultural Tierra de Gaviotas en Ancud, Chiloé"
+                 loading="lazy"
+                 data-placeholder-text="[PLACEHOLDER: Foto institucional TDG]">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- MISIÓN Y VISIÓN -->
+    <section class="section bg-blanco" aria-labelledby="mv-title">
+      <div class="container">
+        <header class="section-header reveal">
+          <span class="label">Propósito</span>
+          <h2 id="mv-title" class="heading-line heading-line--center">Misión y Visión</h2>
+        </header>
+        <div class="mision-vision reveal reveal-delay-1">
+          <div class="mision-card">
+            <div class="mision-card__num">01</div>
+            <p class="mision-card__label">Misión</p>
+            <h3>Lo que hacemos</h3>
+            <p>
+              Promover y conservar el patrimonio cultural, artístico y comunitario del
+              archipiélago de Chiloé, creando instancias de intercambio multicultural que
+              fortalezcan la identidad local y potencien las expresiones artísticas de
+              nuestra región, de forma autogestionada e inclusiva.
+            </p>
+          </div>
+          <div class="mision-card">
+            <div class="mision-card__num">02</div>
+            <p class="mision-card__label">Visión</p>
+            <h3>Lo que soñamos</h3>
+            <p>
+              Ser una fundación referente en el desarrollo cultural del sur de Chile y
+              una plataforma reconocida de intercambio artístico internacional, donde
+              Chiloé sea un faro de cultura viva, patrimonio activo y comunidad creativa
+              para toda América Latina y el mundo.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SÍMBOLO Y ETIMOLOGÍA -->
+    <section class="simbolo-section" id="simbolo" aria-labelledby="sim-title">
+      <div class="container">
+        <div class="simbolo-inner reveal">
+          <div class="simbolo-img">
+            <img src="/images/logo/tdg5.png"
+                 alt="Símbolo de la Fundación Cultural Tierra de Gaviotas"
+                 loading="lazy"
+                 class="img--sm-centered">
+          </div>
+          <div class="simbolo-content">
+            <span class="label">El nombre y el símbolo</span>
+            <h2 id="sim-title">¿Qué significa<br>Tierra de Gaviotas?</h2>
+            <p>
+              El nombre proviene del mapudungun <em>Chilhué</em>, la raíz ancestral de la
+              palabra Chiloé. Este vínculo lingüístico conecta nuestra fundación con la
+              identidad profunda y ancestral del territorio insular que habitamos.
+            </p>
+            <p>
+              Nuestro símbolo combina el archipiélago de Chiloé con una clave de sol,
+              representando la riqueza artística de la región. Las gaviotas reflejan el
+              intercambio cultural entre lugareños y viajeros. Los semicírculos abiertos
+              en el norte y sur del archipiélago simbolizan libertad y protección del
+              territorio insular.
+            </p>
+            <!-- CAMBIO 8 — Infografía editorial de etimología -->
+            <div class="etimologia-infografia" role="img" aria-label="Infografía: Chelle (gaviota) + Hue (lugar de) = Chilhué, raíz de Chiloé">
+              <div class="etim-palabra">
+                <span class="etim-num">01</span>
+                <span class="etim-mapudungun">Chelle</span>
+                <span class="etim-trad">Gaviota característica</span>
+                <span class="etim-contexto">de la costa de Chiloé</span>
+              </div>
+
+              <div class="etim-mas" aria-hidden="true">+</div>
+
+              <div class="etim-palabra">
+                <span class="etim-num">02</span>
+                <span class="etim-mapudungun">Hue</span>
+                <span class="etim-trad">Lugar de</span>
+              </div>
+
+              <div class="etim-flecha" aria-hidden="true">
+                <svg viewBox="0 0 120 24" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M0 12 L110 12" stroke="#FFB600" stroke-width="2"
+                        stroke-dasharray="4 4" fill="none"/>
+                  <path d="M110 12 L100 6 M110 12 L100 18" stroke="#FFB600"
+                        stroke-width="2" stroke-linecap="round" fill="none"/>
+                </svg>
+              </div>
+
+              <div class="etim-resultado">
+                <span class="etim-resultado-lbl">Así nace</span>
+                <span class="etim-resultado-palabra">Chilhué</span>
+                <span class="etim-resultado-trad">
+                  "Lugar de gaviotas <em>o chelles</em>"
+                </span>
+                <span class="etim-resultado-nota">raíz mapudungun de la palabra Chiloé</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- HISTORIA CRONOLÓGICA -->
+    <section class="section bg-blanco" id="historia" aria-labelledby="hist-title">
+      <div class="container">
+        <div class="about-grid about-grid--reverse about-grid--top">
+          <div class="about-content reveal">
+            <span class="label">Nuestra trayectoria</span>
+            <h2 id="hist-title" class="heading-line">Una historia de vuelo propio</h2>
+            <!-- CAMBIO 9 — Timeline con identidad por hito -->
+            <nav class="timeline" aria-label="Cronología de la fundación">
+              <div class="timeline-item timeline-item--tdg">
+                <div class="timeline-item__marca" aria-hidden="true"></div>
+                <p class="timeline-year">2017</p>
+                <p class="timeline-title">El comienzo</p>
+                <p class="timeline-desc">Se forma el equipo fundador en Ancud, Chiloé, con el propósito de crear instancias culturales autogestionadas para la comunidad.</p>
+              </div>
+              <div class="timeline-item timeline-item--trova">
+                <div class="timeline-item__marca" aria-hidden="true"></div>
+                <p class="timeline-year">2018</p>
+                <p class="timeline-title">Primer Festival de Música Trova</p>
+                <p class="timeline-desc">Primera iniciativa realizada los días 20, 21 y 22 de febrero en la Plaza de Armas y Teatro Municipal de Ancud, con artistas como Evelyn Cornejo, Ángelo Escobar y Kaskivano. Fue el antecedente directo del Festival de Gaviotas.</p>
+              </div>
+              <div class="timeline-item timeline-item--festival">
+                <div class="timeline-item__marca" aria-hidden="true"></div>
+                <p class="timeline-year">2019</p>
+                <p class="timeline-title">Nace el Festival de Gaviotas</p>
+                <p class="timeline-desc">Primera edición del Festival de Gaviotas. Comienza el encuentro multicultural que se convertiría en la iniciativa más importante de la fundación.</p>
+              </div>
+              <div class="timeline-item timeline-item--tdg">
+                <div class="timeline-item__marca" aria-hidden="true"></div>
+                <p class="timeline-year">2020–2021</p>
+                <p class="timeline-title">Crecimiento y nuevos programas</p>
+                <p class="timeline-desc">Inicia Gaviotas on the Rock (2021), Gaviotas al Estrecho, una
+                  <a href="[PLACEHOLDER: URL YouTube Clínica Batería 2020]"
+                     target="_blank" rel="noopener noreferrer"
+                     class="link-video">clínica de batería vía streaming</a>
+                  con Ignacio Oyarzún, y el trabajo de vinculación territorial con escuelas rurales.</p>
+              </div>
+              <div class="timeline-item timeline-item--tdg">
+                <div class="timeline-item__marca" aria-hidden="true"></div>
+                <p class="timeline-year">2022</p>
+                <p class="timeline-title">Constitución legal</p>
+                <p class="timeline-desc">El 17 de octubre de 2022 se constituye legalmente la Fundación Cultural Tierra de Gaviotas (Inscripción N° 336270, SRCeI). Esta consolidación jurídica abre nuevas puertas de financiamiento y alianzas.</p>
+              </div>
+              <div class="timeline-item timeline-item--tdg">
+                <div class="timeline-item__marca" aria-hidden="true"></div>
+                <p class="timeline-year">2023–2025</p>
+                <p class="timeline-title">Consolidación institucional</p>
+                <p class="timeline-desc">Obtención de registros oficiales: Ministerio de las Culturas (N°589), Ministerio de Hacienda, GORE Los Lagos (N°3174). Embajada cultural internacional con Jorge Alvarado en México. Festival edición especial diciembre 2025.</p>
+              </div>
+            </nav>
+          </div>
+          <div class="about-img reveal reveal-delay-2">
+            <!-- [PLACEHOLDER: Foto histórica del primer festival o del equipo fundador. Nombre: images/eventos/historia-tdg.jpg] -->
+            <img src="/images/eventos/historia-tdg.jpg"
+                 alt="Historia de la Fundación Cultural Tierra de Gaviotas desde 2017"
+                 loading="lazy"
+                 data-placeholder-text="[PLACEHOLDER: Foto histórica TDG]">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- DIRECTORIO -->
+    <section class="section bg-crema" id="directorio" aria-labelledby="dir-title">
+      <div class="container">
+        <header class="section-header reveal">
+          <span class="label">Gobierno</span>
+          <h2 id="dir-title" class="heading-line heading-line--center">Directorio</h2>
+          <p class="lead">
+            Nuestro directorio fue electo el 17-10-2022 con mandato de 5 años.
+            Fuente: Certificado de Directorio SRCeI, Folio 500691294713, emitido el 13-04-2026.
+          </p>
+        </header>
+
+        <div class="grid grid-auto-4 reveal reveal-delay-1">
+
+          <article class="card-miembro">
+            <div class="card-miembro__photo">
+              <!-- [PLACEHOLDER: Foto Luis Soto. Nombre: images/equipo/luis-soto.jpg] -->
+              <img src="/images/equipo/luis-soto.jpg" alt="Luis Miguel Soto Almonacid, Presidente" loading="lazy">
+              <div class="card-miembro__photo-placeholder" aria-hidden="true">LS</div>
+            </div>
+            <p class="card-miembro__rol">Presidente</p>
+            <h3 class="card-miembro__nombre">Luis Miguel Soto Almonacid</h3>
+            <p class="card-miembro__email">
+              <a href="mailto:l.soto@tierradegaviotas.cl" aria-label="Escribir a Luis Miguel Soto">l.soto@tierradegaviotas.cl</a>
+            </p>
+            <div class="card-miembro__links">
+              <!-- [PLACEHOLDER: Activar cuando se tenga la URL de LinkedIn de Luis Soto]
+              <a href="[PLACEHOLDER: URL LinkedIn Luis Soto]" target="_blank" rel="noopener noreferrer"
+                 class="card-miembro__social" aria-label="LinkedIn de Luis Miguel Soto">
+                <svg fill="currentColor" viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+              </a> -->
+            </div>
+          </article>
+
+          <article class="card-miembro">
+            <div class="card-miembro__photo">
+              <img src="/images/equipo/claudio-aguila.jpg" alt="Claudio Esteban Águila Martínez, Vicepresidente" loading="lazy">
+              <div class="card-miembro__photo-placeholder" aria-hidden="true">CÁ</div>
+            </div>
+            <p class="card-miembro__rol">Vicepresidente</p>
+            <h3 class="card-miembro__nombre">Claudio Esteban Águila Martínez</h3>
+            <p class="card-miembro__email">
+              <a href="mailto:c.aguila@tierradegaviotas.cl" aria-label="Escribir a Claudio Águila">c.aguila@tierradegaviotas.cl</a>
+            </p>
+          </article>
+
+          <article class="card-miembro">
+            <div class="card-miembro__photo">
+              <img src="/images/equipo/daniela-vera.jpg" alt="Daniela Soledad Vera Gamín, Secretaria" loading="lazy">
+              <div class="card-miembro__photo-placeholder" aria-hidden="true">DV</div>
+            </div>
+            <p class="card-miembro__rol">Secretaria</p>
+            <h3 class="card-miembro__nombre">Daniela Soledad Vera Gamín</h3>
+            <p class="card-miembro__email">
+              <a href="mailto:d.vera@tierradegaviotas.cl" aria-label="Escribir a Daniela Vera">d.vera@tierradegaviotas.cl</a>
+            </p>
+          </article>
+
+          <article class="card-miembro">
+            <div class="card-miembro__photo">
+              <img src="/images/equipo/renato-mansilla.jpg" alt="Renato Ignacio Mansilla Haller, Tesorero" loading="lazy">
+              <div class="card-miembro__photo-placeholder" aria-hidden="true">RM</div>
+            </div>
+            <p class="card-miembro__rol">Tesorero</p>
+            <h3 class="card-miembro__nombre">Renato Ignacio Mansilla Haller</h3>
+            <p class="card-miembro__email">
+              <a href="mailto:r.mansilla@tierradegaviotas.cl" aria-label="Escribir a Renato Mansilla">r.mansilla@tierradegaviotas.cl</a>
+            </p>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- TRANSPARENCIA Y ACREDITACIONES -->
+    <section class="section bg-blanco" id="acreditaciones" aria-labelledby="acred-title">
+      <div class="container">
+        <header class="section-header reveal">
+          <span class="label">Transparencia</span>
+          <h2 id="acred-title" class="heading-line heading-line--center">Registros Oficiales del Estado de Chile</h2>
+          <p class="lead">
+            Operamos con total transparencia y bajo la supervisión del Estado de Chile.
+            Contamos con todos los registros oficiales que acreditan nuestra legalidad,
+            seriedad y habilitación para recibir fondos públicos y privados.
+          </p>
+        </header>
+
+        <p class="text-center text-suave reveal rut-note">
+          RUT Fundación: <strong class="text-cafe">65.216.893-0</strong>
+        </p>
+
+        <div class="grid grid-auto-3 reveal reveal-delay-1">
+
+          <!-- 1. Certificado de Vigencia -->
+          <article class="card-acred">
+            <div class="card-acred__header">
+              <div class="card-acred__icon" aria-hidden="true">
+                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"/></svg>
+              </div>
+              <div>
+                <p class="card-acred__org">Registro Civil e Identificación — Chile</p>
+                <h3 class="card-acred__nombre">Certificado de Vigencia de Persona Jurídica Sin Fines de Lucro</h3>
+              </div>
+            </div>
+            <p class="card-acred__desc">
+              Certifica oficialmente que la Fundación Cultural Tierra de Gaviotas está vigente
+              como persona jurídica sin fines de lucro ante el Estado de Chile.
+              Verificable en registrocivil.gob.cl
+            </p>
+            <div class="card-acred__meta">
+              <span class="card-acred__chip"><strong>Folio:</strong> 500691294741</span>
+              <span class="card-acred__chip"><strong>Código verificación:</strong> 9bf02672bceb</span>
+              <span class="card-acred__chip"><strong>Inscripción:</strong> N° 336270</span>
+              <span class="card-acred__chip"><strong>Emisión:</strong> 13-04-2026</span>
+            </div>
+            <span class="card-acred__vigente">VIGENTE</span>
+          </article>
+
+          <!-- 2. Ministerio de las Culturas -->
+          <article class="card-acred">
+            <div class="card-acred__header">
+              <div class="card-acred__icon" aria-hidden="true">
+                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/></svg>
+              </div>
+              <div>
+                <p class="card-acred__org">Ministerio de las Culturas, las Artes y el Patrimonio</p>
+                <h3 class="card-acred__nombre">Registro Nacional de Agentes Culturales, Artísticos y Patrimoniales</h3>
+              </div>
+            </div>
+            <p class="card-acred__desc">
+              Reconocimiento oficial del Estado de Chile como agente cultural activo a nivel
+              nacional. Este registro acredita nuestra trayectoria y capacidad de gestión cultural.
+            </p>
+            <div class="card-acred__meta">
+              <span class="card-acred__chip"><strong>N° Registro:</strong> 589</span>
+              <span class="card-acred__chip"><strong>Folio:</strong> 13389</span>
+              <span class="card-acred__chip"><strong>Fecha:</strong> 27/03/2025</span>
+            </div>
+            <span class="card-acred__vigente">ACTIVO</span>
+          </article>
+
+          <!-- 3. OIP -->
+          <article class="card-acred">
+            <div class="card-acred__header">
+              <div class="card-acred__icon" aria-hidden="true">
+                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/></svg>
+              </div>
+              <div>
+                <p class="card-acred__org">Consejo Nacional — Fondo de Fortalecimiento de OIP (MINSEGPRES)</p>
+                <h3 class="card-acred__nombre">Catastro de Organizaciones de Interés Público</h3>
+              </div>
+            </div>
+            <p class="card-acred__desc">
+              Acreditación que certifica que la fundación tiene por finalidad la promoción del
+              interés general, conforme a la Ley del Fondo de Fortalecimiento de las
+              Organizaciones de Interés Público.
+            </p>
+            <div class="card-acred__meta">
+              <span class="card-acred__chip"><strong>Fecha inscripción:</strong> 19/04/2023</span>
+            </div>
+            <span class="card-acred__vigente">INSCRITA</span>
+          </article>
+
+          <!-- 4. GORE Los Lagos -->
+          <article class="card-acred">
+            <div class="card-acred__header">
+              <div class="card-acred__icon" aria-hidden="true">
+                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 14v3m4-3v3m4-3v3M3 21h18M3 10h18M3 7l9-4 9 4M4 10h16v11H4V10z"/></svg>
+              </div>
+              <div>
+                <p class="card-acred__org">Gobierno Regional de Los Lagos</p>
+                <h3 class="card-acred__nombre">Registro de Receptores de Fondos Públicos — GORE Los Lagos</h3>
+              </div>
+            </div>
+            <p class="card-acred__desc">
+              Habilitación para recibir fondos públicos del Gobierno Regional de Los Lagos.
+              Documento firmado electrónicamente según Ley N° 19.799, conforme a la Ley N° 19.862, Art. 1°.
+            </p>
+            <div class="card-acred__meta">
+              <span class="card-acred__chip"><strong>N° Registro:</strong> 3174</span>
+              <span class="card-acred__chip"><strong>Fecha:</strong> 28/04/2025</span>
+              <span class="card-acred__chip"><strong>Firmado por:</strong> Jefe Dpto. Jurídico GORE Los Lagos</span>
+            </div>
+            <span class="card-acred__vigente">HABILITADA</span>
+          </article>
+
+          <!-- 5. Ministerio de Hacienda -->
+          <article class="card-acred">
+            <div class="card-acred__header">
+              <div class="card-acred__icon" aria-hidden="true">
+                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+              </div>
+              <div>
+                <p class="card-acred__org">Ministerio de Hacienda — Registro Central</p>
+                <h3 class="card-acred__nombre">Registro Central de Colaboradores del Estado y Municipalidades</h3>
+              </div>
+            </div>
+            <p class="card-acred__desc">
+              Inscripción como persona jurídica receptora de fondos públicos, conforme al
+              Artículo 6° de la Ley 19.862. Habilita a la fundación para recibir transferencias
+              del Estado y municipios de todo Chile.
+            </p>
+            <div class="card-acred__meta">
+              <span class="card-acred__chip"><strong>Ley:</strong> Art. 6°, Ley N° 19.862</span>
+              <span class="card-acred__chip"><strong>Fecha inscripción:</strong> 10/04/2023</span>
+            </div>
+            <span class="card-acred__vigente">INSCRITA</span>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA FINAL -->
+    <section class="cta-banner" aria-label="Llamada a la acción">
+      <div class="container">
+        <span class="label label--block">Sé parte del vuelo</span>
+        <h2 class="reveal">¿Quieres colaborar con nuestra misión?</h2>
+        <p class="reveal reveal-delay-1">Ya sea como voluntario/a, donante o aliado institucional — hay un lugar para ti en Tierra de Gaviotas.</p>
+        <div class="cta-banner__btns reveal reveal-delay-2">
+          <a href="/voluntariado" class="btn btn--ambar btn--lg">Ser voluntario/a</a>
+          <a href="/donaciones"   class="btn btn--outline-white btn--lg">Apoyar con donación</a>
+          <a href="/contacto"     class="btn btn--outline-white btn--lg">Contactarnos</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+</BaseLayout>

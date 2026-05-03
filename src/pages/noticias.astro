@@ -1,0 +1,199 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+<BaseLayout
+  title="Noticias — Próximamente | Fundación Cultural Tierra de Gaviotas"
+  description="La sección de Noticias de la Fundación Cultural Tierra de Gaviotas estará disponible próximamente."
+  canonical="https://tierradegaviotas.cl/noticias"
+>
+  <meta name="robots" content="noindex, nofollow" slot="head">
+
+  <main id="main-content" role="main">
+
+    <!-- ═══════════════════════════════════════════════════════════════
+         PÁGINA TEMPORALMENTE DESACTIVADA — PRÓXIMAMENTE
+         Para reactivar: restaurar el bloque comentado a continuación
+         ═══════════════════════════════════════════════════════════════ -->
+
+    <!-- Página "Próximamente" — visible mientras Noticias esté desactivada -->
+    <section class="section bg-crema noticias-proximamente">
+      <div class="container noticias-proximamente__inner">
+        <span class="label noticias-proximamente__label">Actualidad</span>
+        <h1 class="noticias-proximamente__heading">
+          Noticias y novedades
+        </h1>
+        <p class="noticias-proximamente__text">
+          Esta sección estará disponible muy pronto. Mientras tanto,
+          síguenos en nuestras redes sociales para estar al día de todo
+          lo que ocurre en Tierra de Gaviotas.
+        </p>
+        <div class="noticias-proximamente__actions">
+          <a href="https://instagram.com/tdgaviotas" target="_blank" rel="noopener noreferrer"
+             class="btn btn--cafe" aria-label="Seguir en Instagram">
+            Instagram @tdgaviotas
+          </a>
+          <a href="https://facebook.com/tdgaviotas" target="_blank" rel="noopener noreferrer"
+             class="btn btn--outline btn--cafe" aria-label="Seguir en Facebook">
+            Facebook /tdgaviotas
+          </a>
+        </div>
+        <a href="/" class="btn btn--ambar btn--lg">Volver al inicio</a>
+      </div>
+    </section>
+
+    <!--
+    ═══════════════════════════════════════════════════════════════
+    CONTENIDO ORIGINAL — NOTICIAS (DESACTIVADO TEMPORALMENTE)
+    Para reactivar:
+    1. Eliminar la sección "Próximamente" de arriba
+    2. Descomentar el bloque a continuación
+    3. Restaurar "Noticias" en el navbar de todas las páginas
+    4. Eliminar <meta name="robots" content="noindex, nofollow"> del slot head
+    ═══════════════════════════════════════════════════════════════ -->
+
+    <!-- SECCIÓN ORIGINAL — oculta con clase CSS para fácil reactivación (quitar clase noticias-desactivada) -->
+    <section class="section bg-crema noticias-desactivada" aria-labelledby="news-title" aria-hidden="true">
+      <div class="container">
+
+        <!-- Instrucciones para el equipo TDG -->
+        <div class="instrucciones-box reveal">
+          <p class="instrucciones-box__title">📝 Cómo agregar una noticia (para el equipo TDG)</p>
+          <p>
+            Para agregar una noticia nueva: abrir este archivo en GitHub → hacer clic en el ícono del lápiz →
+            copiar un bloque <code>&lt;!-- INICIO NOTICIA --&gt; ... &lt;!-- FIN NOTICIA --&gt;</code> →
+            pegarlo <strong>antes</strong> del primer bloque existente → cambiar título, fecha, categoría y texto →
+            hacer clic en "Commit changes". El sitio se actualizará en 3-5 minutos.
+          </p>
+        </div>
+
+        <p class="sr-only" id="news-title">Lista de noticias de la Fundación</p>
+
+        <!-- NOTICIA DESTACADA -->
+        <!-- INICIO NOTICIA DESTACADA -->
+        <article class="noticias-featured reveal" aria-label="Noticia destacada">
+          <div class="noticias-featured__img">
+            <!-- [PLACEHOLDER: Imagen de la noticia destacada. Nombre: images/noticias/noticia-destacada-01.jpg] -->
+            <img src="/images/noticias/noticia-destacada-01.jpg"
+                 alt="[PLACEHOLDER: Descripción de la imagen de la noticia destacada]"
+                 loading="lazy"
+                 data-placeholder-text="[PLACEHOLDER: Imagen noticia destacada]">
+          </div>
+          <div class="noticias-featured__body">
+            <div class="noticias-featured__meta">
+              <!-- [PLACEHOLDER: Cambiar categoría y fecha de la noticia] -->
+              <span class="noticias-featured__cat">[Categoría]</span>
+              <span>[DD de Mes de AAAA]</span>
+            </div>
+            <h2 class="noticias-featured__title">
+              <!-- [PLACEHOLDER: Título de la noticia destacada] -->
+              [PLACEHOLDER: Título de la noticia más reciente]
+            </h2>
+            <p class="noticias-featured__excerpt">
+              <!-- [PLACEHOLDER: Resumen de 2-3 oraciones de la noticia] -->
+              [PLACEHOLDER: Breve descripción de la noticia. Máximo 3 oraciones que inviten a leer más.
+              Puede ser sobre el festival, un nuevo taller, una alianza, un logro institucional, etc.]
+            </p>
+            <a href="#" class="btn btn--cafe">
+              <!-- [PLACEHOLDER: Si hay URL del artículo completo, reemplazar #] -->
+              Leer más
+            </a>
+          </div>
+        </article>
+        <!-- FIN NOTICIA DESTACADA -->
+
+        <!-- GRID DE NOTICIAS -->
+        <h2 class="sr-only">Todas las noticias</h2>
+        <div class="grid grid-auto-3">
+
+          <!-- INICIO NOTICIA -->
+          <article class="card-noticia reveal">
+            <div class="card-noticia__img">
+              <!-- [PLACEHOLDER: Imagen de la noticia 1. Nombre: images/noticias/noticia-01.jpg] -->
+              <img src="/images/noticias/noticia-01.jpg"
+                   alt="[PLACEHOLDER: Descripción imagen noticia 1]"
+                   loading="lazy"
+                   data-placeholder-text="[PLACEHOLDER: Foto noticia]">
+            </div>
+            <div class="card-noticia__body">
+              <div class="card-noticia__meta">
+                <span class="card-noticia__cat">[Categoría]</span>
+                <span>[Fecha]</span>
+              </div>
+              <h3 class="card-noticia__title">
+                [PLACEHOLDER: Título de la noticia 1]
+              </h3>
+              <p class="card-noticia__excerpt">
+                [PLACEHOLDER: Extracto breve de la noticia 1. Describir en 2-3 líneas el contenido principal.]
+              </p>
+              <a href="#" class="card-noticia__link">Leer más</a>
+            </div>
+          </article>
+          <!-- FIN NOTICIA -->
+
+          <!-- INICIO NOTICIA -->
+          <article class="card-noticia reveal reveal-delay-1">
+            <div class="card-noticia__img">
+              <img src="/images/noticias/noticia-02.jpg"
+                   alt="[PLACEHOLDER: Descripción imagen noticia 2]"
+                   loading="lazy"
+                   data-placeholder-text="[PLACEHOLDER: Foto noticia]">
+            </div>
+            <div class="card-noticia__body">
+              <div class="card-noticia__meta">
+                <span class="card-noticia__cat">[Categoría]</span>
+                <span>[Fecha]</span>
+              </div>
+              <h3 class="card-noticia__title">
+                [PLACEHOLDER: Título de la noticia 2]
+              </h3>
+              <p class="card-noticia__excerpt">
+                [PLACEHOLDER: Extracto breve de la noticia 2.]
+              </p>
+              <a href="#" class="card-noticia__link">Leer más</a>
+            </div>
+          </article>
+          <!-- FIN NOTICIA -->
+
+          <!-- INICIO NOTICIA -->
+          <article class="card-noticia reveal reveal-delay-2">
+            <div class="card-noticia__img">
+              <img src="/images/noticias/noticia-03.jpg"
+                   alt="[PLACEHOLDER: Descripción imagen noticia 3]"
+                   loading="lazy"
+                   data-placeholder-text="[PLACEHOLDER: Foto noticia]">
+            </div>
+            <div class="card-noticia__body">
+              <div class="card-noticia__meta">
+                <span class="card-noticia__cat">[Categoría]</span>
+                <span>[Fecha]</span>
+              </div>
+              <h3 class="card-noticia__title">
+                [PLACEHOLDER: Título de la noticia 3]
+              </h3>
+              <p class="card-noticia__excerpt">
+                [PLACEHOLDER: Extracto breve de la noticia 3.]
+              </p>
+              <a href="#" class="card-noticia__link">Leer más</a>
+            </div>
+          </article>
+          <!-- FIN NOTICIA -->
+
+        </div>
+
+        <!-- Mensaje cuando no haya más noticias -->
+        <div class="text-center reveal noticias-final-box">
+          <p class="noticias-final-box__text">
+            Para estar al tanto de todas nuestras novedades en tiempo real, síguenos en redes sociales.
+          </p>
+          <div class="noticias-final-box__links">
+            <a href="https://instagram.com/tdgaviotas" target="_blank" rel="noopener noreferrer" class="btn btn--outline btn--sm">Instagram @tdgaviotas</a>
+            <a href="https://facebook.com/tdgaviotas" target="_blank" rel="noopener noreferrer" class="btn btn--outline btn--sm">Facebook /tdgaviotas</a>
+            <a href="https://youtube.com/@tdgaviotas" target="_blank" rel="noopener noreferrer" class="btn btn--outline btn--sm">YouTube @tdgaviotas</a>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+</BaseLayout>

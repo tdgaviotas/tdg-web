@@ -1,0 +1,243 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+<BaseLayout
+  title="Apóyanos | Fundación Cultural Tierra de Gaviotas"
+  description="Apoya la Fundación Cultural Tierra de Gaviotas con una donación. Tu aporte permite festivales, talleres gratuitos y vinculación comunitaria en Chiloé."
+  canonical="https://tierradegaviotas.cl/donaciones"
+>
+  <main id="main-content" role="main">
+
+    <!-- PAGE HERO -->
+    <section class="page-hero page-hero--donaciones" aria-labelledby="ph-title">
+      <div class="container page-hero__content">
+        <nav class="breadcrumb" aria-label="Ruta de navegación">
+          <a href="/">Inicio</a>
+          <span class="breadcrumb__sep" aria-hidden="true">›</span>
+          <span class="breadcrumb__current" aria-current="page">Apóyanos</span>
+        </nav>
+        <span class="label page-hero__label">Haz la diferencia</span>
+        <h1 id="ph-title">Sé parte del vuelo</h1>
+        <p class="lead">Tu contribución permite que los festivales, talleres gratuitos y el trabajo territorial con comunidades de Chiloé continúen siendo posibles.</p>
+      </div>
+    </section>
+
+    <!-- POR QUÉ DONAR -->
+    <section class="section bg-crema" aria-labelledby="porq-title">
+      <div class="container">
+        <header class="section-header reveal">
+          <span class="label">Tu impacto</span>
+          <h2 id="porq-title" class="heading-line heading-line--center">¿Por qué apoyar a Tierra de Gaviotas?</h2>
+        </header>
+        <div class="por-que-grid reveal reveal-delay-1">
+          <div class="por-que-item">
+            <div class="por-que-item__icon" aria-hidden="true">🎭</div>
+            <h3>Cultura accesible para todos</h3>
+            <p>Todos nuestros talleres son gratuitos y abiertos a la comunidad. Tu donación garantiza que eso siga siendo posible independientemente del nivel económico de los participantes.</p>
+          </div>
+          <div class="por-que-item">
+            <div class="por-que-item__icon" aria-hidden="true">🏝️</div>
+            <h3>Patrimonio chiloense vivo</h3>
+            <p>Trabajamos para que la identidad ancestral de Chiloé no quede en los libros, sino que se exprese, se baile, se cante y se transmita de generación en generación.</p>
+          </div>
+          <div class="por-que-item">
+            <div class="por-que-item__icon" aria-hidden="true">🔐</div>
+            <h3>Transparencia total</h3>
+            <p>Somos una fundación legalmente constituida con 5 registros oficiales del Estado de Chile. Cada peso donado se gestiona con responsabilidad y rendición de cuentas.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- IMPACTO DE TU DONACIÓN -->
+    <section class="section bg-blanco" aria-labelledby="imp-title">
+      <div class="container">
+        <header class="section-header reveal">
+          <span class="label">Impacto concreto</span>
+          <h2 id="imp-title" class="heading-line heading-line--center">Con tu aporte puedes financiar...</h2>
+          <p class="lead">Estimaciones referenciales. Cada donación, por pequeña que sea, contribuye a nuestra misión.</p>
+        </header>
+        <div class="impacto-grid reveal reveal-delay-1">
+          <div class="impacto-item">
+            <p class="impacto-item__monto">$5.000</p>
+            <p class="impacto-item__desc">Materiales para una clase de cueca o batería para un niño de la comunidad</p>
+          </div>
+          <div class="impacto-item">
+            <p class="impacto-item__monto">$15.000</p>
+            <p class="impacto-item__desc">Transporte de un artista desde Chiloé continental para participar en un taller</p>
+          </div>
+          <div class="impacto-item">
+            <p class="impacto-item__monto">$50.000</p>
+            <p class="impacto-item__desc">Producción técnica de un evento cultural comunitario en una escuela rural</p>
+          </div>
+          <div class="impacto-item">
+            <p class="impacto-item__monto">$100.000</p>
+            <p class="impacto-item__desc">Un día completo de producción audiovisual para documentar el patrimonio chiloense</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PLATAFORMAS DE DONACIÓN -->
+    <section class="section bg-crema" id="plataformas" aria-labelledby="plat-title">
+      <div class="container">
+        <header class="section-header reveal">
+          <span class="label">Formas de apoyar</span>
+          <h2 id="plat-title" class="heading-line heading-line--center">Elige tu método de donación</h2>
+          <p class="lead">Plataformas seguras para donaciones únicas o recurrentes, desde Chile y el mundo.</p>
+        </header>
+
+        <div class="grid grid-auto-3 reveal reveal-delay-1">
+
+          <!-- Reveniu -->
+          <div class="card-donacion">
+            <div class="card-donacion__icon" aria-hidden="true">🇨🇱</div>
+            <h3 class="card-donacion__titulo">Reveniu</h3>
+            <p class="card-donacion__desc">Plataforma chilena de donaciones recurrentes. Paga con tarjeta de débito, crédito o transferencia bancaria de Chile.</p>
+            <span class="card-donacion__badge">Donaciones recurrentes · Chile</span>
+            <!-- [PLACEHOLDER: Reemplazar # con la URL real de Reveniu cuando esté disponible] -->
+            <a href="#" class="btn btn--ambar" aria-label="Donar mediante Reveniu">
+              <!-- [PLACEHOLDER: URL Reveniu] -->
+              Donar con Reveniu
+            </a>
+          </div>
+
+          <!-- Donorbox -->
+          <div class="card-donacion">
+            <div class="card-donacion__icon" aria-hidden="true">🌎</div>
+            <h3 class="card-donacion__titulo">Donorbox</h3>
+            <p class="card-donacion__desc">Plataforma internacional para donaciones únicas o recurrentes. Acepta tarjetas de crédito internacionales y PayPal.</p>
+            <span class="card-donacion__badge">Internacional · Recurrente o única</span>
+            <!-- [PLACEHOLDER: Reemplazar # con la URL real de Donorbox cuando esté disponible] -->
+            <a href="#" class="btn btn--ambar" aria-label="Donar mediante Donorbox">
+              <!-- [PLACEHOLDER: URL Donorbox] -->
+              Donar con Donorbox
+            </a>
+          </div>
+
+          <!-- Payku -->
+          <div class="card-donacion">
+            <div class="card-donacion__icon" aria-hidden="true">💳</div>
+            <h3 class="card-donacion__titulo">Payku</h3>
+            <p class="card-donacion__desc">Pagos digitales chilenos. Acepta transferencia bancaria, Webpay, tarjetas de débito y crédito chilenas.</p>
+            <span class="card-donacion__badge">Pagos digitales · Chile</span>
+            <!-- [PLACEHOLDER: Reemplazar # con la URL real de Payku cuando esté disponible] -->
+            <a href="#" class="btn btn--ambar" aria-label="Donar mediante Payku">
+              <!-- [PLACEHOLDER: URL Payku] -->
+              Donar con Payku
+            </a>
+          </div>
+
+        </div>
+
+        <!-- WhatsApp para otras formas de apoyo -->
+        <div class="donacion-cta">
+          <p class="donacion-cta__text">
+            ¿Prefieres coordinar directamente? Escríbenos y buscamos la mejor forma juntos.
+          </p>
+          <a href="https://wa.me/56991042738" target="_blank" rel="noopener noreferrer" class="btn btn--outline">
+            Contactar por WhatsApp
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- TRANSFERENCIA BANCARIA -->
+    <section class="section bg-blanco" id="transferencia" aria-labelledby="banco-title">
+      <div class="container container--narrow">
+        <header class="section-header reveal">
+          <span class="label">Transferencia directa</span>
+          <h2 id="banco-title" class="heading-line heading-line--center">Datos Bancarios</h2>
+          <p class="lead">Para transferencias bancarias directas desde Chile. Haz clic en "Copiar" para copiar cada dato al portapapeles.</p>
+        </header>
+
+        <div class="banco-box reveal reveal-delay-1">
+          <div class="banco-dato">
+            <span class="banco-dato__label">Titular</span>
+            <span class="banco-dato__valor">Fundación Cultural Tierra de Gaviotas</span>
+            <button class="banco-dato__copy" data-copy="Fundación Cultural Tierra de Gaviotas" aria-label="Copiar nombre del titular">Copiar</button>
+          </div>
+          <div class="banco-dato">
+            <span class="banco-dato__label">RUT</span>
+            <span class="banco-dato__valor">65.216.893-0</span>
+            <button class="banco-dato__copy" data-copy="65.216.893-0" aria-label="Copiar RUT">Copiar</button>
+          </div>
+          <div class="banco-dato">
+            <span class="banco-dato__label">Banco</span>
+            <!-- [PLACEHOLDER: Reemplazar con el banco real de la fundación] -->
+            <span class="banco-dato__valor">[PLACEHOLDER: Nombre del banco]</span>
+            <button class="banco-dato__copy" data-copy="[PLACEHOLDER: Nombre del banco]" aria-label="Copiar nombre del banco">Copiar</button>
+          </div>
+          <div class="banco-dato">
+            <span class="banco-dato__label">Tipo de cuenta</span>
+            <!-- [PLACEHOLDER: Tipo de cuenta: Cuenta Corriente / Cuenta Vista / Cuenta RUT] -->
+            <span class="banco-dato__valor">[PLACEHOLDER: Tipo de cuenta]</span>
+            <button class="banco-dato__copy" data-copy="[PLACEHOLDER: Tipo de cuenta]" aria-label="Copiar tipo de cuenta">Copiar</button>
+          </div>
+          <div class="banco-dato">
+            <span class="banco-dato__label">N° de cuenta</span>
+            <!-- [PLACEHOLDER: Número de cuenta bancaria de la fundación] -->
+            <span class="banco-dato__valor">[PLACEHOLDER: Número de cuenta]</span>
+            <button class="banco-dato__copy" data-copy="[PLACEHOLDER: Número de cuenta]" aria-label="Copiar número de cuenta">Copiar</button>
+          </div>
+          <div class="banco-dato">
+            <span class="banco-dato__label">Correo (comprobante)</span>
+            <span class="banco-dato__valor">admin@tierradegaviotas.cl</span>
+            <button class="banco-dato__copy" data-copy="admin@tierradegaviotas.cl" aria-label="Copiar correo de contacto">Copiar</button>
+          </div>
+        </div>
+
+        <p class="text-center reveal donacion-note">
+          Por favor envía el comprobante a <a href="mailto:admin@tierradegaviotas.cl" class="link-ambar">admin@tierradegaviotas.cl</a>
+          indicando tu nombre y si deseas que tu aporte sea de conocimiento público.
+        </p>
+      </div>
+    </section>
+
+    <!-- ACREDITACIONES (confianza antes de donar) -->
+    <section class="section bg-cafe" aria-labelledby="conf-title">
+      <div class="container">
+        <header class="section-header reveal">
+          <span class="label">Tu dinero está seguro</span>
+          <h2 id="conf-title" class="heading-line heading-line--center">Donación con respaldo institucional</h2>
+          <p class="lead">Antes de donar, conoce nuestros registros oficiales que garantizan que somos una organización legítima y transparente.</p>
+        </header>
+        <div class="grid grid-auto-3 reveal reveal-delay-1">
+          <div class="acred-card">
+            <div class="acred-card__icon" aria-hidden="true">📜</div>
+            <h3 class="acred-card__title">Persona Jurídica Vigente</h3>
+            <p class="acred-card__text">Certificado SRCeI Folio 500691294741 · Código 9bf02672bceb</p>
+          </div>
+          <div class="acred-card">
+            <div class="acred-card__icon" aria-hidden="true">🏛️</div>
+            <h3 class="acred-card__title">Agente Cultural Oficial</h3>
+            <p class="acred-card__text">Ministerio de las Culturas · Registro N° 589</p>
+          </div>
+          <div class="acred-card">
+            <div class="acred-card__icon" aria-hidden="true">🏦</div>
+            <h3 class="acred-card__title">Habilitada para fondos públicos</h3>
+            <p class="acred-card__text">Ministerio de Hacienda · Ley 19.862 · GORE Los Lagos N° 3174</p>
+          </div>
+        </div>
+        <div class="text-center reveal block-mt">
+          <a href="/nosotros#acreditaciones" class="btn btn--outline-white btn--sm">Ver todos los registros oficiales</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA FINAL -->
+    <section class="cta-banner" aria-label="Llamada final a donar">
+      <div class="container">
+        <span class="label label--block">Cada aporte importa</span>
+        <h2 class="reveal">¿Listo para alzar el vuelo?</h2>
+        <p class="reveal reveal-delay-1">Somos una fundación autogestionada que cree que la cultura es un derecho de todas las personas. Con tu apoyo, seguimos volando.</p>
+        <div class="cta-banner__btns reveal reveal-delay-2">
+          <a href="#plataformas" class="btn btn--ambar btn--lg">Ir a las plataformas de donación</a>
+          <a href="/contacto" class="btn btn--outline-white btn--lg">Tengo una pregunta</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+  <script is:inline src="/js/components.js" slot="scripts"></script>
+</BaseLayout>

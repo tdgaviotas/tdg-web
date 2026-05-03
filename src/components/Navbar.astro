@@ -1,0 +1,43 @@
+---
+interface Props {
+  pathname: string;
+}
+
+const { pathname } = Astro.props;
+---
+<header class="navbar" id="navbar" role="banner">
+  <div class="container navbar__inner">
+    <a href="/" class="navbar__logo" aria-label="Fundación Cultural Tierra de Gaviotas — Inicio">
+      <img src="/images/logo/tdg1.png"
+           alt="Tierra de Gaviotas"
+           class="navbar__logo-img"
+           width="200" height="55"
+           loading="eager">
+    </a>
+
+    <button class="navbar__hamburger"
+            id="menuToggle"
+            aria-expanded="false"
+            aria-controls="navMenu"
+            aria-label="Abrir menú de navegación">
+      <span class="navbar__hamburger-line"></span>
+      <span class="navbar__hamburger-line"></span>
+      <span class="navbar__hamburger-line"></span>
+    </button>
+
+    <nav class="navbar__nav" id="navMenu" role="navigation" aria-label="Navegación principal">
+      <ul class="navbar__list">
+        <li><a href="/"               class="navbar__link" aria-current={pathname === '/' ? 'page' : undefined}>Inicio</a></li>
+        <li><a href="/nosotros"       class="navbar__link" aria-current={pathname.startsWith('/nosotros') ? 'page' : undefined}>Nosotros</a></li>
+        <li><a href="/programas"      class="navbar__link" aria-current={pathname.startsWith('/programas') ? 'page' : undefined}>Programas</a></li>
+        <li><a href="/voluntariado"   class="navbar__link" aria-current={pathname.startsWith('/voluntariado') ? 'page' : undefined}>Voluntariado</a></li>
+        <!-- Noticias: desactivado temporalmente — reactivar quitando este comentario
+        <li><a href="/noticias"       class="navbar__link" aria-current={pathname.startsWith('/noticias') ? 'page' : undefined}>Noticias</a></li>
+        -->
+        <li><a href="/manual-grafico" class="navbar__link" aria-current={pathname.startsWith('/manual-grafico') ? 'page' : undefined}>Manual gráfico</a></li>
+        <li><a href="/contacto"       class="navbar__link" aria-current={pathname.startsWith('/contacto') ? 'page' : undefined}>Contacto</a></li>
+      </ul>
+      <a href="/donaciones" class="btn btn--ambar navbar__cta" aria-current={pathname.startsWith('/donaciones') ? 'page' : undefined}>Apóyanos</a>
+    </nav>
+  </div>
+</header>

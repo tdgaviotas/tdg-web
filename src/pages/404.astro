@@ -1,0 +1,24 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+<BaseLayout
+  title="Página no encontrada | Fundación Cultural Tierra de Gaviotas"
+  description="La página que buscas no existe o fue movida."
+  canonical="https://tierradegaviotas.cl/404"
+>
+  <main id="main-content" role="main">
+    <section class="section bg-crema noticias-proximamente">
+      <div class="container noticias-proximamente__inner">
+        <span class="label noticias-proximamente__label">Error 404</span>
+        <h1 class="noticias-proximamente__heading">
+          Página no encontrada
+        </h1>
+        <p class="noticias-proximamente__text">
+          La página que buscas no existe o fue movida a otra dirección.
+          Puedes volver al inicio o usar la navegación para encontrar lo que necesitas.
+        </p>
+        <a href="/" class="btn btn--ambar btn--lg">Volver al inicio</a>
+      </div>
+    </section>
+  </main>
+</BaseLayout>

@@ -1,0 +1,127 @@
+---
+import '../styles/main.css';
+import '../styles/components.css';
+import '../styles/components-v2.css';
+import '../styles/responsive.css';
+import { Font } from 'astro:assets';
+import { ClientRouter } from 'astro:transitions';
+import Navbar from '../components/Navbar.astro';
+import Footer from '../components/Footer.astro';
+
+interface Props {
+  title: string;
+  description: string;
+  canonical: string;
+}
+
+const { title, description, canonical } = Astro.props;
+const { pathname } = Astro.url;
+
+const schemaOrg = {
+  "@context": "https://schema.org",
+  "@type": ["NGO", "Organization"],
+  "@id": "https://tierradegaviotas.cl/#organization",
+  "name": "Fundación Cultural Tierra de Gaviotas",
+  "alternateName": ["Tierra de Gaviotas", "TDG", "TDGaviotas"],
+  "legalName": "Fundación Cultural Tierra de Gaviotas",
+  "taxID": "65.216.893-0",
+  "url": "https://tierradegaviotas.cl",
+  "logo": {
+    "@type": "ImageObject",
+    "url": "https://tierradegaviotas.cl/images/logo/TDG_1_Horizontal_-_Para_fondo_claro.png",
+    "width": 600,
+    "height": 200
+  },
+  "image": "https://tierradegaviotas.cl/images/og-image.jpg",
+  "description": "Fundación cultural sin fines de lucro fundada en Ancud, Chiloé, Chile. Promueve el intercambio multicultural, las artes, el patrimonio y la vinculación comunitaria desde 2017.",
+  "foundingDate": "2022",
+  "foundingLocation": { "@type": "Place", "name": "Ancud, Chiloé, Chile" },
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Ancud",
+    "addressRegion": "Los Lagos",
+    "addressCountry": "CL"
+  },
+  "contactPoint": [
+    { "@type": "ContactPoint", "email": "contacto@tierradegaviotas.cl", "contactType": "customer support", "availableLanguage": "Spanish" },
+    { "@type": "ContactPoint", "telephone": "+56991042738", "contactType": "customer support" }
+  ],
+  "sameAs": [
+    "https://instagram.com/tdgaviotas",
+    "https://facebook.com/tdgaviotas",
+    "https://youtube.com/@tdgaviotas",
+    "https://tiktok.com/@tdgaviotas",
+    "https://linkedin.com/company/tierra-de-gaviotas"
+  ],
+  "knowsAbout": ["Cultura chilota", "Música chilena", "Patrimonio cultural", "Festivales de música", "Artes escénicas", "Luthería", "Folclore chileno"],
+  "areaServed": { "@type": "Place", "name": "Chile" }
+};
+---
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>{title}</title>
+  <meta name="description" content={description}>
+  <link rel="canonical" href={canonical}>
+  <link rel="alternate" hreflang="es-CL" href={canonical}>
+
+  <!-- Open Graph -->
+  <meta property="og:type"        content="website">
+  <meta property="og:url"         content={canonical}>
+  <meta property="og:title"       content={title}>
+  <meta property="og:description" content={description}>
+  <meta property="og:image"       content="https://tierradegaviotas.cl/images/og-image.jpg">
+  <meta property="og:image:width"  content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:locale"      content="es_CL">
+  <meta property="og:site_name"   content="Fundación Cultural Tierra de Gaviotas">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card"        content="summary_large_image">
+  <meta name="twitter:site"        content="@tdgaviotas">
+  <meta name="twitter:title"       content={title}>
+  <meta name="twitter:description" content={description}>
+  <meta name="twitter:image"       content="https://tierradegaviotas.cl/images/og-image.jpg">
+
+  <!-- Favicons -->
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="icon" type="image/x-icon"  href="/favicon.ico">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <meta name="theme-color" content="#352112">
+
+  <!-- Fuentes (self-hosted por Astro 6) -->
+  <Font cssVariable="--font-cormorant-garamond" />
+  <Font cssVariable="--font-playfair-display" />
+  <Font cssVariable="--font-source-serif-4" />
+  <Font cssVariable="--font-orbitron" />
+
+  <!-- Navegación SPA-like con view transitions -->
+  <ClientRouter />
+
+  <!-- Slot para head adicional por página (robots, JSON-LD de breadcrumb, etc.) -->
+  <slot name="head" />
+
+  <!-- Schema.org JSON-LD -->
+  <script type="application/ld+json" set:html={JSON.stringify(schemaOrg)}></script>
+</head>
+
+<body>
+  <a href="#main-content" class="skip-link">Ir al contenido principal</a>
+
+  <!-- ===================== NAVBAR ===================== -->
+  <Navbar pathname={pathname} />
+
+  <!-- ===================== CONTENIDO DE PÁGINA ===================== -->
+  <slot />
+
+  <!-- ===================== FOOTER ===================== -->
+  <Footer />
+
+  <script is:inline src="/js/main.js"></script>
+  <slot name="scripts" />
+  </body>
+</html>

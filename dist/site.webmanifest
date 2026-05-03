@@ -1,0 +1,25 @@
+{
+  "name": "Fundación Cultural Tierra de Gaviotas",
+  "short_name": "TDG",
+  "description": "Arte, cultura y patrimonio desde Chiloé, Chile",
+  "icons": [
+    {
+      "src": "/apple-touch-icon.png",
+      "sizes": "180x180",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ],
+  "theme_color": "#352112",
+  "background_color": "#F4EFE9",
+  "display": "standalone",
+  "start_url": "/",
+  "scope": "/",
+  "lang": "es-CL",
+  "orientation": "portrait-primary"
+}
