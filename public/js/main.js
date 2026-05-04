@@ -318,5 +318,12 @@ function initDOM() {
 /* ---------------------------------------------------------------
    ARRANQUE
    --------------------------------------------------------------- */
+let _firstRun = true;
+
+document.addEventListener('astro:page-load', () => {
+  if (_firstRun) { _firstRun = false; return; }
+  initDOM();
+});
+
+// La primera carga la ejecuta la etiqueta script al final del body
 initDOM();
-document.addEventListener('astro:after-swap', initDOM);
