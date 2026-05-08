@@ -242,7 +242,8 @@ import BaseLayout from '../layouts/BaseLayout.astro';
           <h2 id="dir-title" class="heading-line heading-line--center">Contacto directo con el equipo</h2>
         </header>
 
-        <div class="reveal reveal-delay-1 overflow-x-auto">
+        <!-- Tabla (desktop) -->
+        <div class="reveal reveal-delay-1 overflow-x-auto directorio-desktop">
           <table class="directorio-tabla" aria-label="Directorio de la Fundación Cultural Tierra de Gaviotas">
             <thead>
               <tr>
@@ -284,6 +285,40 @@ import BaseLayout from '../layouts/BaseLayout.astro';
               </tr>
             </tbody>
           </table>
+        </div>
+
+        <!-- Cards (móvil) -->
+        <div class="reveal reveal-delay-1 directorio-mobile">
+          <div class="directorio-card">
+            <span class="directorio-card__cargo">Presidente</span>
+            <span class="directorio-card__nombre">Luis Miguel Soto Almonacid</span>
+            <a href="mailto:l.soto@tierradegaviotas.cl" class="directorio-card__email">l.soto@tierradegaviotas.cl</a>
+          </div>
+          <div class="directorio-card">
+            <span class="directorio-card__cargo">Vicepresidente</span>
+            <span class="directorio-card__nombre">Claudio Esteban Águila Martínez</span>
+            <a href="mailto:c.aguila@tierradegaviotas.cl" class="directorio-card__email">c.aguila@tierradegaviotas.cl</a>
+          </div>
+          <div class="directorio-card">
+            <span class="directorio-card__cargo">Secretaria</span>
+            <span class="directorio-card__nombre">Daniela Soledad Vera Gamín</span>
+            <a href="mailto:d.vera@tierradegaviotas.cl" class="directorio-card__email">d.vera@tierradegaviotas.cl</a>
+          </div>
+          <div class="directorio-card">
+            <span class="directorio-card__cargo">Tesorero</span>
+            <span class="directorio-card__nombre">Renato Ignacio Mansilla Haller</span>
+            <a href="mailto:r.mansilla@tierradegaviotas.cl" class="directorio-card__email">r.mansilla@tierradegaviotas.cl</a>
+          </div>
+          <div class="directorio-card">
+            <span class="directorio-card__cargo">Administración general</span>
+            <span class="directorio-card__nombre">Fundación Cultural Tierra de Gaviotas</span>
+            <a href="mailto:admin@tierradegaviotas.cl" class="directorio-card__email">admin@tierradegaviotas.cl</a>
+          </div>
+          <div class="directorio-card">
+            <span class="directorio-card__cargo">RRPP / Prensa</span>
+            <span class="directorio-card__nombre">Fundación Cultural Tierra de Gaviotas</span>
+            <a href="mailto:contacto@tierradegaviotas.cl" class="directorio-card__email">contacto@tierradegaviotas.cl</a>
+          </div>
         </div>
 
         <div class="reveal text-center-mt">

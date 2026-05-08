@@ -318,12 +318,19 @@ function initDOM() {
 /* ---------------------------------------------------------------
    ARRANQUE
    --------------------------------------------------------------- */
-let _firstRun = true;
+// initDOM() se ejecuta UNA sola vez por página:
+// - 1ª carga: la etiqueta script al final del body
+// - Navegaciones ClientRouter: evento astro:page-load
+// El flag evita que astro:page-load (que también se dispara en
+// la 1ª carga) ejecute initDOM() dos veces.
+let _skipNextPageLoad = true;
+
+initDOM();
 
 document.addEventListener('astro:page-load', () => {
-  if (_firstRun) { _firstRun = false; return; }
+  if (_skipNextPageLoad) {
+    _skipNextPageLoad = false;
+    return;
+  }
   initDOM();
 });
-
-// La primera carga la ejecuta la etiqueta script al final del body
-initDOM();

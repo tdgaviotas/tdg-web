@@ -1908,8 +1908,38 @@
 .directorio-tabla td:nth-child(2) { font-weight: 600; color: var(--color-blanco); }
 .directorio-tabla a { color: var(--color-ambar); transition: opacity var(--t-fast); }
 .directorio-tabla a:hover { opacity: 0.75; }
+/* Directorio: tabla en desktop, cards en móvil */
+.directorio-desktop { display: block; }
+.directorio-mobile  { display: none; }
+
 @media (max-width: 600px) {
-  .directorio-tabla thead { display: none; }
-  .directorio-tabla tr  { display: block; border-bottom: 1px solid rgba(255,255,255,0.08); padding: var(--sp-4) 0; }
-  .directorio-tabla td  { display: block; border: none; padding: 0.25rem var(--sp-4); }
+  .directorio-desktop { display: none; }
+  .directorio-mobile  { display: flex; flex-direction: column; gap: var(--sp-4); }
 }
+
+.directorio-card {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-1);
+  padding: var(--sp-5);
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: var(--radius-md);
+}
+.directorio-card__cargo {
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--color-ambar);
+}
+.directorio-card__nombre {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--color-blanco);
+}
+.directorio-card__email {
+  font-size: 0.88rem;
+  color: var(--color-ambar);
+}
+.directorio-card__email:hover { opacity: 0.75; }

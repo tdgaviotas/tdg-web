@@ -129,10 +129,6 @@ body {
     order: 0;
   }
 
-  .about-img {
-    min-height: 250px;
-  }
-
   /* === Misión Visión === */
   .mision-vision {
     grid-template-columns: 1fr;
